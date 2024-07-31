@@ -1,0 +1,445 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+<!-- example_template.html -->
+
+<style>
+.explore-link {
+  background-color: #083590; /* Background color (you can change this to your desired color) */
+  padding: 10px 20px; /* Add padding to the link */
+  border-radius: 20px; /* Add border radius to give rounded corners */
+  color: #ffffff; /* Text color */
+  font-size: 15px!important;
+  text-align: center;
+  display: inline-block; /* Make the link inline block to adjust width */
+  width: 250px; /* Set a specific width for the link (you can change this to your desired width) */
+}
+
+.explore-link:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #ffffff; /* Add a white border on hover */
+}
+
+</style>
+
+    <!-- Start Slider -->
+    <div id="slides-shop" class="cover-slides" style="height: 570px;">
+        <ul class="slides-container">
+            <li class="text-start">
+                <img  src="{% static 'shop/images/Banners/web/programming1.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 bay">
+                            <h1  style="font-size: 30px;" class="m-b-20"><strong>We revolutionize web development with innovative strategies,<br>
+                            top-tier performance, and steadfast principles.<br>
+                            </strong>
+                             </h1>
+                            <p class="m-b-40">Our commitment is to deliver dependable, top-quality, and distinct <br> web solutions with a proven track record.</p>
+                            <p><a href="#" class="explore-link" >Get Started</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-start">
+                <img src="{% static 'shop/images/Banners/web/programming3.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 bay">
+                            <h1 style="font-size: 30px;" class="m-b-20"><strong>We extend the horizons of web development through innovation<br>
+                            exceptional performance, and unwavering principles.<br></strong></h1>
+                            <p class="m-b-40"> Committed to delivering dependable, high-quality, and uniquely <br>
+                             tailored web solutions with a proven track record of excellence.</p>
+                            <p><a href="#" class="explore-link">Learn more</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="circle-animation"></div>
+            <div class="circle-animation1"></div>
+    </div>
+   <!-- End container 1 -->  
+
+   <!-- start container 1 -->
+ <!-- Advanced Tech Container</title> -->
+
+<style>
+    section {
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        padding: 50px;
+    }
+
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        flex: 1;
+        padding-right: 50px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image1 {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .animationImage {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: -40%;
+        border-radius: 100px;
+        transform: translate(-50%, -100%);
+        animation: moveUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .big-number {
+        font-size: 80px; /* You can adjust the font size as needed */
+        font-weight: bold; /* You can adjust the font weight as needed */
+        color: #083590;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px; /* Adjust the spacing between the number and the paragraphs */
+    }
+
+    .text-content p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+
+    /* Media query for phone versions */
+    @media screen and (max-width: 767px) {
+        .container2 {
+            flex-direction: column;
+        }
+
+        .content {
+            padding-right: 0;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .animationImage {
+            position: static;
+            transform: none;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .big-number {
+            font-size: 60px;
+        }
+    }
+</style>
+
+
+    <!-- Start Categories  -->
+
+  <style>
+    .container4 {
+        display: flex;
+    }
+
+    .text7 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+        }
+        .text7 {
+            padding: 20px;
+        }
+    }
+#zoomImage {
+    transition: transform 0.3s ease;
+}
+
+#zoomImage:hover {
+    transform: scale(0.9); /* Zoom out effect */
+}
+</style>
+
+<section1>
+    <div class="container4">
+        
+        <div class="text7">
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 28px;" >
+                Introducing Adroit Web Solutions
+            </p>
+            <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">_</div>
+                    </div>
+
+            <p style="color: black; font-family: sans-serif; font-size: 80%;" >
+               Adroit Web Solutions is a branch of Adroit Solutions Limited, headquartered in the Nigeria and with an active presence in Nigeria. With almost 20 years of experience, we've carefully built a team of over 50 skilled software engineers and capable managers, all dedicated to web development.
+            </p>
+            <p style="margin-top: 10px; color: black; font-family: sans-serif; font-size: 80%;" >
+              Our strength lies in creating tailored web solutions, using a wide range of platforms and technologies. From established systems like Windows and Unix to modern elements like Oracle, JAVA, BIRT, Linux, .Net, J2EE, J2SE, DROOLS, ETL Tools, e.t.c we excel at crafting custom web projects.
+            </p>
+            <p style="margin-top: 10px; color: black; font-family: sans-serif; font-size: 80%;" >
+              This expertise, combined with our successful handling of complex IT projects, has driven our growth and established a strong market position.
+            </p>
+        </div>
+        <div style="flex: 1;">
+            <img id="zoomImage" src="{% static 'shop/images/Banners/web/programming2.jpg' %}" style="width: 100%; border-radius: 10px;" alt="Image">
+        </div>
+    </div>
+</section1>
+<!-- <script type="text/javascript">
+    const zoomImage = document.getElementById('zoomImage');
+
+    zoomImage.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = zoomImage.getBoundingClientRect();
+        const mouseX = e.clientX - left;
+        const mouseY = e.clientY - top;
+        
+        const centerX = width / 2;
+        const centerY = height / 2;
+        
+        const deltaX = (centerX - mouseX) / centerX;
+        const deltaY = (centerY - mouseY) / centerY;
+        
+        const scaleAmount = 1.1;
+        const scaleValue = `scale(${1 + deltaX * scaleAmount},${1 + deltaY * scaleAmount})`;
+        
+        zoomImage.style.transform = scaleValue;
+    });
+
+    zoomImage.addEventListener('mouseleave', () => {
+        zoomImage.style.transform = 'scale(1)';
+    });
+</script> -->
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+        <style>
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
+            margin-left: 10px;
+        }
+
+        .feature-item {
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .feature-item {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .feature-item {
+                width: 100%;
+            }
+        }
+    </style>
+<section style="font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;">
+    <h1 style="color: #083590; font-weight: bold; display: flex; justify-content: center; align-items: center; margin-bottom: 10px; margin-top: 10px;">Key Web Features for Manufacturing and Technology Industries</h1>
+    <ul class="feature-list">
+        <li class="feature-item">✔️ Comprehensive Portfolio Planning</li>
+        <li class="feature-item">✔️ Dynamic Risk Analysis</li>
+        <li class="feature-item">✔️ Conceptual Estimating Tools</li>
+        <li class="feature-item">✔️ Assembly Estimation Capabilities</li>
+        <li class="feature-item">✔️ Streamlined Online Procurement/Bidding</li>
+        <li class="feature-item">✔️ Agile Kanban-Style Activity Boards</li>
+        <li class="feature-item">✔️ Accessible Standard Engineering Forms</li>
+        <li class="feature-item">✔️ Efficient Inspection Record Keeping</li>
+        <li class="feature-item">✔️ Seamless Funding Management</li>
+        <li class="feature-item">✔️ Accurate Forecasting Tools</li>
+        <li class="feature-item">✔️ Real-time Cash Flow Monitoring</li>
+        <li class="feature-item">✔️ Precise CPM Scheduling</li>
+        <li class="feature-item">✔️ Intuitive Asset Explorer</li>
+        <li class="feature-item">✔️ Proactive Predictive Maintenance</li>
+        <li class="feature-item">✔️ Automated Work Order Management</li>
+        <li class="feature-item">✔️ Flexible Leasing Solutions</li>
+        <li class="feature-item">✔️ Effective Space Management Tools</li>
+        <li class="feature-item">✔️ Advanced Inventory Control</li>
+        <li class="feature-item">✔️ Resource Availability Tracking</li>
+        <li class="feature-item">✔️ Visual Workflow Mapping</li>
+        <li class="feature-item">✔️ User-Friendly Timesheet Management</li>
+        <li class="feature-item">✔️ Custom Form Builder for Adaptability</li>
+        <li class="feature-item">✔️ Smooth Integration Manager</li>
+        <li class="feature-item">✔️ Seamlessly Integrated BIM Functionality</li>
+        <li class="feature-item">✔️ In-depth Claim Analysis Tools</li>
+    </ul>
+</section>
+    <!-- end Categories  -->
+
+    <!-- end Categories  -->
+<!-- start Categories  -->
+
+
+    <!-- end Categories  -->
+
+
+    <!-- start Categories  -->
+<section style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; margin-top: -2%;">
+  <div class="container7">
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/28474384.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold; color: #083590;">Business Consulting</h2>
+        <p>We help businesses grow, help in consultation give you ideas on softwares that would automate your processes and aid faster and accurate decision making.</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/30437459.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px;  font-weight: bold;  color: #083590;">Software/Web Development</h2>
+        <p>Our consultants have delivered several projects for customers throughout the world and have the breadth and depth of technical expertise and experience to deliver high quality at reasonable cost while minimizing risk. We can help you achieve your time to market requirements while addressing any skills shortages</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/295917.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold;  color: #083590;">Training Audit</h2>
+        <p>Provide assurance that a management framework is in place for training activities and that it is implemented and monitored.</p>
+      </div>
+    </div>
+    <!-- The fourth box will wrap to the next row automatically -->
+  </div>
+</section>
+
+<style type="text/css">
+.container7 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 50px auto;
+  background-color: white;
+  flex-wrap: wrap; /* Add flex-wrap property to wrap boxes to the next row */
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.box {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 8px 20px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Added transition for smooth animation */
+  min-width: 280px; /* Add a minimum width to avoid squeezing on smaller screens */
+}
+
+.text {
+  text-align: center;
+  font-family: Helvetica;
+  color: black;
+  font-size: 12px;
+}
+
+.icon-container {
+  display: inline-block;
+}
+
+.icon {
+  width: 50px; /* Adjust the size of the icon as needed */
+  height: 50px;
+}
+
+/* Add hover effect for the boxes */
+.box:hover {
+  transform: translateY(-5px) scale(1.05); /* Scale up and move up on hover */
+}
+
+/* Add media query for phone version */
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%; /* Change width to 100% for single column layout */
+  }
+}
+</style>
+
+
+    <!-- end Categories  -->
+
+    <!-- end Categories  -->
+
+    <!-- end Categories  -->
+
+ <div class="row" style="margin-top: -10%!important; margin-left: 5px; display: flex; justify-content: center; align-items: center;">
+                        <div class="big-number">_______________</div>
+                    </div>
+
+
+    <!-- Start Categories  -->
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <!-- End Products  -->
+
+    <!-- Start Blog  -->
+    
+    <!-- End Blog  -->
+
+    {% endblock content %}

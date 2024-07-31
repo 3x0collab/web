@@ -1,0 +1,423 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+<!-- example_template.html -->
+<!-- <div class="row" style="background-color: #083590; margin-top: %!important;display: flex; justify-content: start; align-items: flex-start;">
+                        <div style="color: white; font-weight: bold; font-size: 30px; width: 100%; margin-left: 5%;">Asset Management Compliance Solutions</div>
+                    </div> -->
+<style>
+.explore-link {
+  background-color: #083590; /* Background color (you can change this to your desired color) */
+  padding: 10px 20px; /* Add padding to the link */
+  border-radius: 20px; /* Add border radius to give rounded corners */
+  color: #ffffff; /* Text color */
+  font-size: 15px!important;
+  text-align: center;
+  display: inline-block; /* Make the link inline block to adjust width */
+  width: 250px; /* Set a specific width for the link (you can change this to your desired width) */
+}
+
+.explore-link:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #ffffff; /* Add a white border on hover */
+}
+
+</style>
+
+    <!-- Start Slider -->
+     <!-- end Categories  -->
+    <style>
+        .banner-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 5%;
+    align-items: start;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('{% static 'shop/images/Banners/J4x.gif' %}');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Adjust the color and opacity here */
+    opacity: 0.7; /* Adjust the opacity value (0 to 1) */
+    z-index: 0;
+}
+
+.centered-text {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    /*  background-color: rgba(0, 0, 0, 0.7);*/
+    border-radius: 10px;
+}
+    </style>
+<div class="banner-container">
+    <span class="banner-content">
+        <div style="">  
+            <div class="centered-text bay1">
+                <div class="col-md-12">
+                    <h1  style="font-size: 45px; color: white;  font-family: Times New Roman;" class="m-b-20"><strong>
+Compliance Solutions for Pensions</strong></h1>
+                    <p class="m-b-40" style=" font-family: ; font-size: 20px;">Supporting the pension sector with their regulatory reporting</p>
+                    <p class="m-b-40" style=" font-family: sans-serif; font-size:60%!important;">Regulators are demanding ever-greater transparency and accountability from the pension sector. The FCA has recently set out the critical role that pension providers must play in helping to launch the government’s Pensions Dashboard initiative, which aims to empower savers to engage with their pensions. This presents some challenges to pension providers particularly data sharing between multiple parties to collate information for the dashboards. They must focus on data security and ensure that only legitimate parties have access to the dashboards.</p>
+
+                    <p class="m-b-40" style=" font-family: sans-serif; font-size:60%!important;">With all the new regulations, pensions providers are turning to smart solutions to monitor regulatory compliance and automate reporting, as well as to mitigate risks. Adroit Solutions helps the pension sector facilitate regulatory compliance and improve risk management, so they can spend more time improving business and customer outcomes around them.</p>
+
+                    <p><a href="#" class="explore-link" style="margin-top: 4%;">Get in Touch</a></p>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+<div class="circle-animation"></div>
+   <!-- End container 1 -->  
+
+   <!-- start container 1 -->
+
+    <!-- Start Categories  -->
+ <!-- Advanced Tech Container</title> -->
+
+<style>
+    section {
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        padding: 50px;
+    }
+
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        flex: 1;
+        padding-right: 50px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image1 {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .animationImage {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: -40%;
+        border-radius: 100px;
+        transform: translate(-50%, -100%);
+        animation: moveUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .big-number {
+        font-size: 80px; /* You can adjust the font size as needed */
+        font-weight: bold; /* You can adjust the font weight as needed */
+        color: #083590;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px; /* Adjust the spacing between the number and the paragraphs */
+    }
+
+    .text-content p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+
+    /* Media query for phone versions */
+    @media screen and (max-width: 767px) {
+        .container2 {
+            flex-direction: column;
+        }
+
+        .content {
+            padding-right: 0;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .animationImage {
+            position: static;
+            transform: none;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .big-number {
+            font-size: 60px;
+        }
+    }
+</style>
+
+
+
+
+    <!-- Start Categories  -->
+
+  <style>
+    .container4 {
+        display: flex;
+    }
+
+    .text7 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+        }
+        .text7 {
+            padding: 20px;
+        }
+    }
+</style>
+
+<section1>
+    <div class="container4" style="margin-top: -5%;">
+        <div class="text7">
+            <p style="font-weight: bold; color: black;font-family: Times New Roman; font-size: 30px;" >Why Adroit Solutions for Pensions?
+            </p>
+            <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">_</div>
+                    </div>
+
+            <p style="color: black;  font-family: ;" >
+               <p style="color: black; font-weight: bold; font-family: Times New Roman;">Demonstrate Genuine Oversight </p>
+               <p style="font-family: sans-serif; font-size: 80%;">Firms have a seamless control environment between the firm and its third parties for genuine oversight. Adroit Solutions allows firms to map received data, allowing firms to incorporate third party information into a firm’s own risk and monitoring frameworks. This can radically transform the third-party oversight capabilities of a compliance function and allow it to extend best practice beyond the borders of the firm</p>
+            </p>
+            <p style="color: black;  font-family: ;" >
+               <p style="color: black; font-weight: bold; font-family: Times New Roman;">Drive Efficiency and Reduce Overheads</p>
+               <p style="font-family: sans-serif; font-size: 80%;">Adroit Solutions’s online workflows make it simple for pension providers to complete tasks. Our repository features allow you to store and keep an audit trail of relevant documents in one place.</p>
+            </p>
+            <p style="color: black;  font-family: ;" >
+               <p style="color: black; font-weight: bold; font-family: Times New Roman;">Adroit Solutions's key features can help you by:</p>
+               <ul style="margin-left: 3%;font-family: sans-serif; font-size: 80%;">
+                   <li>✪ Save time and money</li>
+                   <li>✪ Mitigate risks and achieve operational resilience</li>
+                   <li>✪ Take full control of your data</li>
+                   <li>✪ Build a comprehensive audit trail/li>
+                   <li>✪ Manage your end-to-end client asset compliance</li>
+                   <li>✪ Provide full transparency and accountability</li>
+               </ul>
+            </p>
+           <!--  <p style="margin-top: 10px; color: black;  font-family: ; " >
+               Adroit develops custom software solutions based on a range of platforms and technologies, including Windows, Unix, Oracle, JAVA, BIRT, Linux, .Net, J2EE, J2SE, DROOLS and other ETL Tools. Our enviable reputation and success in providing pragmatic quality solutions for complex IT projects has resulted in high volume of business.
+            </p> -->
+        </div>
+    </div>
+</section1>
+
+    <!-- end Categories  -->
+  <style>
+    /* Add a wrapper to center the content */
+    .container-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px; /* Gap between containers */
+    }
+
+    /* Style for each container box */
+    .container-box {
+      border: 1px solid #ccc; /* Add a border for a modern look */
+      border-radius: 8px; /* Rounded corners */
+      padding: 20px; /* Add some padding inside the box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+      width: 250px; /* Set a fixed width for each box */
+      text-align: center;
+      height: 300%;
+    }
+
+    .image3 {
+      width: 100px;
+      height: 100px;
+      border-radius: 10%;
+      overflow: hidden;
+      margin: 0 auto; /* Center the image horizontally */
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .text1 {
+      margin-top: 5%;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      background-color: #083590;
+      border-radius: 100px;
+    }
+    .text1:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #083590; /* Add a white border on hover */
+  color: #083590;
+}
+  </style>
+   <div style="margin-top: -80px!important; margin-left: 5px;display: flex; justify-content: center; align-items: center;">
+        <div class="big-number">_____________</div>
+  </div>
+  <div style="display: flex; justify-content: center; align-items: center;">
+       <p style="font-weight: bold; font-size: 40px; color: black;   font-family:Times New Roman ;">Solutions for Pensions
+       </p>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+       <p style=" color: black;   font-family: ;">We help you expand business boundaries with our innovative, high performance and interactive products.
+       </p>
+  </div>
+
+  <div class="container-wrapper" style="margin-bottom: 5%; font-family: sans-serif; font-size: 80%;">
+    <!-- First Container -->
+    <div class="container-box">
+      <div class="container5" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
+        <div class="image3">
+          <a href="#">
+            <img src="{% static 'shop/images/img.jpg' %}" alt="Image 1">
+          </a>
+        </div>
+        <p>The software provides a powerful tool extremely useful in fighting against fraud and in effectively supporting the pivotal roles<p>
+        <div class="text1" style="font-family: Times New Roman;">Read More</div>
+      </div>
+    </div>
+
+    <!-- Second Container -->
+    <div class="container-box">
+      <div class="container5" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
+        <div class="image3">
+          <a href="#">
+            <img src="{% static 'shop/images/29.07.2023_19.27.16_REC-removebg-preview.png' %}" alt="Image 2">
+          </a>
+        </div>
+        <p>RADAR AML/CTFCTR, FTR, STR & SAR NFIU 4.0 XML MONEY LAUNDERING REPORTING SOFTWARE<p>
+        <div class="text1" style="font-family: Times New Roman;">Read More</div>
+      </div>
+    </div>
+
+    <!-- Third Container -->
+    <div class="container-box">
+      <div class="container5" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
+        <div class="image3">
+          <a href="#">
+            <img src="{% static 'shop/images/img.jpg' %}" alt="Image 3">
+          </a>
+        </div>
+        <p>What is eFASS? AXIS is a powerful and multi-datasource information retrieval that combines an enterprise report generation facility ..<p>
+        <div class="text1" style="font-family: Times New Roman;">Read More</div>
+      </div>
+    </div>
+
+    <!-- Fourth Container -->
+    <div class="container-box">
+      <div class="container5" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
+        <div class="image3">
+          <a href="#">
+            <img src="{% static 'shop/images/img.jpg' %}" alt="Image 4">
+          </a>
+        </div>
+        <p>The software provides a powerful tool extremely useful in fighting against fraud and in effectively supporting the pivotal roles<p>
+        <div class="text1" style="font-family: Times New Roman;">iConcept4 Pro</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function animateImage(container) {
+      const image = container.querySelector('img');
+      image.style.transform = 'scale(1.2)';
+    }
+
+    function resetImage(container) {
+      const image = container.querySelector('img');
+      image.style.transform = 'scale(1)';
+    }
+  </script>
+    <!-- Start Categories  -->
+
+<!-- End container 1 -->
+
+
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <!-- End Products  -->
+
+    <!-- Start Blog  -->
+    <!-- End Blog  -->
+
+    {% endblock content %}

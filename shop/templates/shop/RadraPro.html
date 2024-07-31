@@ -1,0 +1,856 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+<!-- example_template.html -->
+
+<style>
+.explore-link {
+  background-color: #083590; /* Background color (you can change this to your desi#083590 color) */
+  padding: 10px 20px; /* Add padding to the link */
+  border-radius: 20px; /* Add border radius to give rounded corners */
+  color: #ffffff; /* Text color */
+  font-size: 15px!important;
+  text-align: center;
+  display: inline-block; /* Make the link inline block to adjust width */
+  width: 250px; /* Set a specific width for the link (you can change this to your desi#083590 width) */
+}
+
+.explore-link:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #ffffff; /* Add a white border on hover */
+}
+
+</style>
+
+    <!-- Start Slider -->
+     <!-- end Categories  -->
+    <style>
+        .banner-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 5%;
+    align-items: start;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('{% static 'shop/images/Banners/low-angle-view-skyscrapers.jpg' %}');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Adjust the color and opacity here */
+    opacity: 0.7; /* Adjust the opacity value (0 to 1) */
+    z-index: 0;
+}
+
+.cente#083590-text {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    /*  background-color: rgba(0, 0, 0, 0.7);*/
+    border-radius: 10px;
+}
+    </style>
+<div class="banner-container">
+    <span class="banner-content">
+        <div style="">  
+            <div class="cente#083590-text bay1">
+                <div class="col-md-12" style="margin-top: 5%; margin-bottom: 10px;">
+                    <h1  style="font-size: 40px; color: white; font-family: 'Poppins', sans-serif;" class="m-b-20"><strong>RADARPRO</strong>
+                    <br>
+                     Internal control software</h1>
+                    <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">__</div>
+                    </div>
+                    <p class="m-b-40" style="font-family: 'Poppins', sans-serif; font-size: 15px;">
+                     As a company, we work hard to improve our offerings from time to time to<br> 
+                     give our clients the best experience.</p>
+                    <p><a href="#" class="explore-link" >Get In Touch</a></p>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+<div class="circle-animation"></div>
+   <!-- End container 1 -->  
+
+   <!-- start container 1 -->
+
+    <!-- Start Categories  -->
+ <!-- Advanced Tech Container</title> -->
+
+<style>
+    section {
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        padding: 50px;
+    }
+
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        flex: 1;
+        padding-right: 50px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image1 {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .animationImage {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: -40%;
+        border-radius: 100px;
+        transform: translate(-50%, -100%);
+        animation: moveUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .big-number {
+        font-size: 80px; /* You can adjust the font size as needed */
+        font-weight: bold; /* You can adjust the font weight as needed */
+        color: #083590;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px; /* Adjust the spacing between the number and the paragraphs */
+    }
+
+    .text-content p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+
+    /* Media query for phone versions */
+    @media screen and (max-width: 767px) {
+        .container2 {
+            flex-direction: column;
+        }
+
+        .content {
+            padding-right: 0;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .animationImage {
+            position: static;
+            transform: none;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .big-number {
+            font-size: 60px;
+        }
+    }
+</style>
+
+
+
+
+    <!-- Start Categories  -->
+
+  <style>
+    .container4 {
+        display: flex;
+    }
+
+    .text7 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+        }
+        .text7 {
+            padding: 20px;
+        }
+    }
+</style>
+
+<section1>
+    <div class="container4" style="margin-top: -5%;">
+        <div style="flex: 1;">
+            <video class="img-fluid" style="border-radius: 30px;" autoplay loop muted>
+        <source src="{% static 'shop/images/Banners/today.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        </div>
+        <div class="text7">
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 30px;" >
+                RADARPRO
+           </p>
+            <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">_</div>
+                    </div>
+
+            <p style="color: black; font-family: sans-serif; font-size: 80%;" >
+               RADARPRO is an internal control software developed by Adroit Consulting Limited Nigeria. The software provides a powerful tool extremely useful in fighting against fraud and in effectively supporting the pivotal roles of Internal Control officers as well as Internal Auditors in today’s ever challenging financial business environment. It has therefore become critical for organizations to implement real-time continuous transaction monitoring and exception management technology that delivers accurate alerts for an effective financial crime management, supports higher standards of corporate governance, reports potential fraudulent activities that may involve staff and customers and above all, maintains reliable financial and operational information.
+            </p>
+           <!--  <p style="margin-top: 10px; color: black; font-family: Helvetica; " >
+               Adroit develops custom software solutions based on a range of platforms and technologies, including Windows, Unix, Oracle, JAVA, BIRT, Linux, .Net, J2EE, J2SE, DROOLS and other ETL Tools. Our enviable reputation and success in providing pragmatic quality solutions for complex IT projects has resulted in high volume of business.
+            </p> -->
+        </div>
+    </div>
+</section1>
+
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+  <div class="row" style="margin-top: -5%!important; margin-left: 5px; display: flex; justify-content: center; align-items: center;">
+                        <div class="big-number">_______________</div>
+                    </div>
+
+
+<style>
+    .container4 {
+        display: flex;
+    }
+
+    .text5 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text5 {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+</style>
+
+<section1 >
+    <div class="container4" style= "margin-top:-70px; padding: 10%;">
+        <div style="flex: 1;">
+            <div class="container20" style="margin-top: 2%; margin-bottom: 2%;">
+  <h2 style="font-weight: bold; color: #083590;">RADARPRO</h2>
+
+  <button class="accordion" style=" background-color: #083590; color: white; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>
+        <ul style="margin-top: 1%;">
+            <li>♦ Real-Time Transaction Monitoring</li>
+            <li>♦ Behavior Analysis</li>
+            <li>♦ Internal and External Fraud Detection</li>
+            <li>♦ Liquidity and Risk Management</li>
+            <li>♦ Regulatory Reporting Automation</li>
+            <li>♦ Customization and Flexibility</li>
+            <li>♦ Multilingual and Multi-Format Support</li>
+            <li>♦ Investigation Capabilities</li>
+            <li>♦ Security and Compliance</li>
+            <li>♦ Risk Mitigation</li>
+            <li><button onclick="openModal()" style="border-radius: 10px; background-color: #083590; color: white;">READ MORE</button></li>
+        </ul>
+
+        <!-- Popup Modal Container -->
+        <div id="myModal" class="modal" style="z-index: 100px;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Additional Information</h2>
+                <p>Here are the detailed features of our comprehensive enterprise fraud management tool:</p>
+                <ol>
+                    <li><span style="font-weight: bold; color: #083590;">Real-Time Transaction Monitoring:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Constantly monitors transaction activity in real-time.</li>
+                            <li>♢ Identifies unusual patterns and anomalies.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Behavior Analysis:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Analyzes the relationships between users, accounts, and entities to identify suspicious behavior.</li>
+                            <li>♢ Detects unusual connections and activities that could indicate potential fraud or criminal activity.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Internal and External Fraud Detection:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Flags both internal and external fraudulent activities within the organization.</li>
+                            <li>♢ Identifies attempts to exploit vulnerabilities and gaps in security measures.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Liquidity and Risk Management:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Assists banks and financial institutions in calculating metrics such as Liquidity Coverage Ratio (LCR) and Net Stable Funding Ratio (NSFR).</li>
+                            <li>♢ Provides information on liquidity buffer eligibility rules, haircuts, and other important factors.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Exposure Monitoring:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Monitors and manages large exposures, concentration risks, and funding concentration per customer, product, country, and currency.</li>
+                            <li>♢ Helps ensure compliance with regulatory requirements related to exposure limits.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Regulatory Reporting Automation:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Streamlines and automates the production of regulatory capital, concentration risk, and liquidity reports.</li>
+                            <li>♢ Generates reports requi#083590 for compliance with Pillar 1 regulatory standards.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Customization and Flexibility:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Offers dedicated modules covering c#083590it, market, liquidity, concentration, and operational risks.</li>
+                            <li>♢ Allows organizations to tailor the solution to their specific requirements.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Multilingual and Multi-Format Support:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Enables submission of reports in supervisors' prefer#083590 languages and formats.</li>
+                            <li>♢ Facilitates effective communication with regulatory bodies.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Comprehensive Data Capture:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Collects and aggregates comprehensive data from various sources within the organization.</li>
+                            <li>♢ Creates a centralized repository for thorough analysis.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Cross-Channel Fraud Prevention:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Addresses the threat of fraud across multiple channels, including phone, web, and other platforms.</li>
+                            <li>♢ Ensures consistent monitoring and prevention mechanisms are in place.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Investigation Capabilities:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Provides tools for in-depth data analysis and investigations into suspected fraudulent activities.</li>
+                            <li>♢ Offers a structu#083590 approach to examine incidents and gather evidence.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Security and Compliance:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Enhances overall security posture by identifying vulnerabilities and improving fraud prevention measures.</li>
+                            <li>♢ Supports compliance efforts by ensuring adherence to regulatory standards.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Industry-Agnostic Solution:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Suitable for various sectors, including banking, insurance, healthcare, and more.</li>
+                            <li>♢ Adaptable to the unique fraud challenges of different industries.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Risk Mitigation:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Helps mitigate potential financial losses and reputational damage caused by fraud incidents.</li>
+                            <li>♢ Enables proactive identification and prevention of fraudulent behavior.</li>
+                        </ul>
+                    </li>
+                    <!-- Repeat the above structure for each feature -->
+                </ol>
+                <p style="margin-top: 10px; color: black;">In summary, our enterprise fraud management tool offers a comprehensive set of features to tackle fraud, manage risks, and ensure compliance across various industries, providing organizations with the tools they need to maintain a secure and trusted operational environment.</p>
+            </div>
+        </div>
+
+
+        <!-- Add CSS styling for the modal -->
+        <style>
+            /* Modal Styling */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <!-- JavaScript functions for opening and closing the modal -->
+        <script>
+            var modal = document.getElementById("myModal");
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+
+            function openModal() {
+                modal.style.display = "block";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+        </script>
+            </p>
+          </div>
+        </div>
+
+        </div>
+        <div class="text5">
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 20px;" >
+              QUALITY ASSURANCE AND AUDIT PROVIDED BY
+            </p>
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 20px;" >
+            ⭐⭐⭐⭐⭐
+            </p>
+
+            <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">__</div>
+                    </div>
+
+            <p style="color: black; font-family: Times New Roman; font-size: 26px;" >
+               “Adroit Solutions Limited was worth a fortune to my Startup. Keep up the excellent work.!”
+            </p>
+        </div>
+    </div>
+</section1>
+    <!-- end Categories  -->
+    <h2 style="font-weight: bold; color: #083590; display: flex; justify-content: center; align-items: center; margin-top: -7%;">What Our users have to say</h2>
+     <div class="row" style="margin-top: -5%!important; margin-left: 5px; display: flex; justify-content: center; align-items: center;">
+                        <div class="big-number">_____</div>
+                    </div>
+<section style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; margin-top: -3%;">
+  <div class="container7">
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/28474384.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold; color: #083590; font-family: Times New Roman;">Business Consulting</h2>
+        <p style="font-family: sans-serif; font-size: 80%;">We help businesses grow, help in consultation give you ideas on softwares that would automate your processes and aid faster and accurate decision making.</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/30437459.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px;  font-weight: bold;  color: #083590; font-family: Times New Roman;">Software/Web Development</h2>
+        <p style="font-family: sans-serif; font-size: 80%;">Our consultants have delive#083590 several projects for customers throughout the world and have the breadth and depth of technical expertise and experience to deliver high quality at reasonable cost while minimizing risk. We can help you achieve your time to market requirements while addressing any skills shortages</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/295917.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold;  color: #083590; font-family: Times New Roman;">Training Audit</h2>
+        <p style="font-family: sans-serif; font-size: 80%;">Provide assurance that a management framework is in place for training activities and that it is implemented and monito#083590.</p>
+      </div>
+    </div>
+    <!-- The fourth box will wrap to the next row automatically -->
+  </div>
+</section>
+
+<style type="text/css">
+.container7 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 50px auto;
+  background-color: white;
+  flex-wrap: wrap; /* Add flex-wrap property to wrap boxes to the next row */
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.box {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 8px 20px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Added transition for smooth animation */
+  min-width: 280px; /* Add a minimum width to avoid squeezing on smaller screens */
+}
+
+.text {
+  text-align: center;
+  font-family: Helvetica;
+  color: black;
+}
+
+.icon-container {
+  display: inline-block;
+}
+
+.icon {
+  width: 50px; /* Adjust the size of the icon as needed */
+  height: 50px;
+}
+
+/* Add hover effect for the boxes */
+.box:hover {
+  transform: translateY(-5px) scale(1.05); /* Scale up and move up on hover */
+}
+
+/* Add media query for phone version */
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%; /* Change width to 100% for single column layout */
+  }
+}
+</style>
+
+    <!-- start Categories  -->
+
+
+    <!-- end Categories  -->
+<!-- start Categories  -->
+
+    <div class="contact-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="contact-form-right">
+                        <h2 style="font-family: Times New Roman;">Book a Demo</h2>
+                        <p>Demo link will be sent to your email address, ensure you input the correct email.</p>
+                        <form id="contactForm" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required data-error="Please enter your Subject">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message" rows="4" data-error="Write your message" required>REQUEST RADARPRO DEMO : </textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="submit-button text-center">
+                                        <button class="btn hvr-hover" id="submit" type="submit" style="border-radius: 10px; background: #083590!important;">Send Message</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <script>
+                            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                event.preventDefault();
+
+                                let formData = new FormData(this);
+
+                                fetch("{% url 'contact-us' %}", {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-CSRFToken': '{{ csrf_token }}'
+                                    },
+                                    body: formData
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        alert('Message sent successfully!');
+                                        location.reload();  // Refresh the page
+                                    } else {
+                                        alert('There was an error sending your message. Please try again.');
+                                    }
+                                })
+                                .catch(error => console.error('Error:', error));
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="contact-info-left">
+                        <h2 style="font-family: Times New Roman;">CONTACT INFO</h2>
+                        <p style="font-family: sans-serif; font-size: 80%; font-weight: bold;">If you have any questions or need further assistance, please feel free to reach out to us:</p>
+                        <ul>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-map-marker-alt"></i>Address: <br>Location,<br>Nigeria</p>
+                            </li>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-6397972713">+234-0000 000 00</a></p>
+                            </li>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">@gmail.com</a></p>
+                            </li>
+                        </ul>
+                        <p style="font-family: sans-serif; font-size: 80%; font-weight: bold;">Our team is available Monday through Friday from 8:00 AM to 5:00 PM. We look forward to hearing from you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end Categories  -->
+
+
+    <!-- start Categories  -->
+<style>
+.container20 {
+        max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 29%);
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .plus-minus {
+    margin-left: 0%!important;
+  }
+}
+</style>
+</head>
+<body>
+<h2 style="font-weight: bold; color: #083590; display: flex; justify-content: center; align-items: center;">FAQs</h2>
+<!-- <div class="container20" style="margin-top: 2%; margin-bottom: 2%;">
+  <h2 style="font-weight: bold; color: #083590;">RADARPRO</h2>
+  <button class="accordion" style="color: #083590; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <button class="accordion" style=" color: #083590; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <button class="accordion" style="  color: #083590; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div> -->
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+      this.querySelector('.plus-minus').textContent = '+';
+    } else {
+      panel.style.display = "block";
+      this.querySelector('.plus-minus').textContent = '-';
+    }
+  });
+}
+</script>
+
+    <!-- end Categories  -->
+
+    <!-- end Categories  -->
+  <style>
+    /* Styling for the container and logo images */
+    .container1 {
+      display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: inset 1px -1px 14px 3px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Ensure logos outside the container are hidden */
+    }
+
+    .logoContainer {
+      display: flex;
+      overflow: hidden; /* Hide overflowing logos */
+    }
+
+    .logo {
+      width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;
+      margin: 0 10px; /* Adjust the margin between logos as needed */
+      opacity: 0.7; /* Adjust the initial opacity of the logos */
+      transition: opacity 0.3s ease; /* Add a smooth transition effect for opacity changes */
+      animation: slideAnimation 19s linear infinite; /* Adjust the time (in seconds) to change logos */
+    }
+
+    @keyframes slideAnimation {
+      0% {
+        transform: translateX(100%);
+        opacity: 0.7;
+      }
+      10%, 90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0.7;
+      }
+    }
+  </style>
+
+  <div class="container1">
+    <!-- <img style="width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;" src="{% static 'shop/images/Trusted/flot.png' %}" alt="Logo 1"> -->
+    <p style="font-weight: bold; margin-right:20px; color: black; font-weight: bold; font-size: 17px; color: black;  font-family: Helvetica;">#Trusted_by:</p>
+    <div class="logoContainer">
+      <!-- Add your logo images here -->
+      <img class="logo" src="{% static 'shop/images/Trusted/Wema-Bank.jpg' %}" alt="Logo 1">
+      <img class="logo" src="{% static 'shop/images/Trusted/sterlink.jfif' %}" alt="Logo 2">
+      <img class="logo" src="{% static 'shop/images/Trusted/sky_bank.jfif' %}" alt="Logo 3">
+      <img class="logo" src="{% static 'shop/images/Trusted/Piggy vext.jpg' %}" alt="Logo 4">
+      <!-- <img class="logo" src="{% static 'shop/images/Trusted/mainstreem.jfif' %}" alt="Logo 5"> -->
+      <img class="logo" src="{% static 'shop/images/Trusted/Keystone-Bank.jpg' %}" alt="Logo 6">
+      <img class="logo" src="{% static 'shop/images/Trusted/itmb-logo.jpg' %}" alt="Logo 7">
+      <img class="logo" src="{% static 'shop/images/Trusted/fsdh.jfif' %}" alt="Logo 8">
+      <img class="logo" src="{% static 'shop/images/Trusted/Union-Bank.jpeg' %}" alt="Logo 9">
+      <img class="logo" src="{% static 'shop/images/Trusted/Fidelity.png' %}" alt="Logo 10">
+      <img class="logo" src="{% static 'shop/images/Trusted/Coronation-Merchant-Bank.jpg' %}" alt="Logo 11">
+      <img class="logo" src="{% static 'shop/images/Trusted/ASO-removebg-preview.png' %}" alt="Logo 12">
+      <!-- Add more logo images as needed -->
+      <!-- Add a total of 20 small logo images -->
+    </div>
+  </div>
+
+<!-- End container 1 -->
+
+
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <!-- End Products  -->
+
+    <!-- Start Blog  -->
+    <!-- End Blog  -->
+
+    {% endblock content %}

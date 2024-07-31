@@ -1,0 +1,1124 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+<!-- example_template.html -->
+
+<style>
+.explore-link {
+  background-color: #083590; /* Background color (you can change this to your desired color) */
+  padding: 10px 20px; /* Add padding to the link */
+  border-radius: 20px; /* Add border radius to give rounded corners */
+  color: #ffffff; /* Text color */
+  font-size: 15px!important;
+  text-align: center;
+  display: inline-block; /* Make the link inline block to adjust width */
+  width: 250px; /* Set a specific width for the link (you can change this to your desired width) */
+}
+
+.explore-link:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #ffffff; /* Add a white border on hover */
+}
+
+</style>
+<style>
+    /* Styles for PC version */
+@media screen and (min-width: 768px) {
+  .mm {
+    height: 560px!important;
+  }
+}
+</style>
+    <!-- Start Slider -->
+    <div id="slides-shop" class="cover-slides mm">
+        <ul class="slides-container">
+            <li class="text-start">
+                <img  src="{% static 'shop/images/adroit/Adroit3.png' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 bay">
+                            <h1  style="font-size: 30px;" class="m-b-20"><strong>Experience Automation & Control<br> 
+                            Fraud detection & Exception<br>
+                             management solutions</strong>
+                            <br>
+                            Anti-Money Laundery Solution Provider</h1>
+                            <p class="m-b-40">Africa's leading IT consulting company. </p>
+                            <p><a href="{% url 'contact-us' %}" class="explore-link" >Get Started</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-start">
+                <img src="{% static 'shop/images/adroit/Adroit5.png' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 bay">
+                            <h1 style="font-size: 30px;" class="m-b-20"><strong>We push business boundaries with our innovation,<br>
+                             high performance and Principles.<br></strong>
+                            <p class="m-b-40">Fully committed to provide reliable, qualitative,<br>
+                             distinctive and time-tested software solutions</p>
+                            <p><a href="{% url 'contact-us' %}" class="explore-link">Learn more</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-start">
+                <img src="{% static 'shop/images/adroit/Adroit4.png' %}" alt="">
+                <div class="container bay">
+                    <div class="row">
+                        <div class="col-md-12 bay">
+                            <h1 style="font-size: 30px;" class="m-b-20"><strong>BUSINESS PRINCIPLES<br></strong>
+                            </h1>
+                            <p class="m-b-40">We constantly strive to anticipate the rapidly changing <br>
+                             needs of our clients and to develop new services to meet those needs.</p>
+                            <p><a href="{% url 'contact-us' %}" class="explore-link">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="circle-animation"></div>
+            <div class="circle-animation1"></div>
+    </div>
+   <!-- End container 1 -->  
+
+   <!-- start container 1 -->
+  <style>
+    /* Styling for the container and logo images */
+    .container1 {
+      display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: inset 1px -1px 14px 3px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Ensure logos outside the container are hidden */
+    }
+
+    .logoContainer {
+      display: flex;
+      overflow: hidden; /* Hide overflowing logos */
+    }
+
+    .logo {
+      width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;
+      margin: 0 10px; /* Adjust the margin between logos as needed */
+      opacity: 0.7; /* Adjust the initial opacity of the logos */
+      transition: opacity 0.3s ease; /* Add a smooth transition effect for opacity changes */
+      animation: slideAnimation 19s linear infinite; /* Adjust the time (in seconds) to change logos */
+    }
+
+    @keyframes slideAnimation {
+      0% {
+        transform: translateX(100%);
+        opacity: 0.7;
+      }
+      10%, 90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0.7;
+      }
+    }
+  </style>
+
+  <div class="container1" style="margin-top: -47px;">
+    <!-- <img style="width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;" src="{% static 'shop/images/Trusted/flot.png' %}" alt="Logo 1"> -->
+    <p style="font-weight: bold; margin-right:20px; color: black; font-weight: bold; font-size: 17px; color: black;  font-family: Helvetica;">#Trusted_by:</p>
+    <div class="logoContainer">
+      <!-- Add your logo images here -->
+      <img class="logo" src="{% static 'shop/images/Trusted/Wema-Bank.jpg' %}" alt="Logo 1">
+      <img class="logo" src="{% static 'shop/images/Trusted/sterlink.jfif' %}" alt="Logo 2">
+      <img class="logo" src="{% static 'shop/images/Trusted/sky_bank.jfif' %}" alt="Logo 3">
+      <img class="logo" src="{% static 'shop/images/Trusted/Piggy vext.jpg' %}" alt="Logo 4">
+      <!-- <img class="logo" src="{% static 'shop/images/Trusted/mainstreem.jfif' %}" alt="Logo 5"> -->
+      <img class="logo" src="{% static 'shop/images/Trusted/Keystone-Bank.jpg' %}" alt="Logo 6">
+      <img class="logo" src="{% static 'shop/images/Trusted/itmb-logo.jpg' %}" alt="Logo 7">
+      <img class="logo" src="{% static 'shop/images/Trusted/fsdh.jfif' %}" alt="Logo 8">
+      <img class="logo" src="{% static 'shop/images/Trusted/Union-Bank.jpeg' %}" alt="Logo 9">
+      <img class="logo" src="{% static 'shop/images/Trusted/Fidelity.png' %}" alt="Logo 10">
+      <img class="logo" src="{% static 'shop/images/Trusted/Coronation-Merchant-Bank.jpg' %}" alt="Logo 11">
+      <img class="logo" src="{% static 'shop/images/Trusted/ASO-removebg-preview.png' %}" alt="Logo 12">
+      <!-- Add more logo images as needed -->
+      <!-- Add a total of 20 small logo images -->
+    </div>
+  </div>
+
+<!-- End container 1 -->
+
+    <!-- Start Categories  -->
+    
+ <!-- Advanced Tech Container</title> -->
+
+<style>
+    section {
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        padding: 50px;
+    }
+
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        flex: 1;
+        padding-right: 50px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image1 {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .animationImage {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: -40%;
+        border-radius: 100px;
+        transform: translate(-50%, -100%);
+        animation: moveUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .big-number {
+        font-size: 80px; /* You can adjust the font size as needed */
+        font-weight: bold; /* You can adjust the font weight as needed */
+        color: #083590;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px; /* Adjust the spacing between the number and the paragraphs */
+    }
+
+    .text-content p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+
+    /* Media query for phone versions */
+    @media screen and (max-width: 767px) {
+        .container2 {
+            flex-direction: column;
+        }
+
+        .content {
+            padding-right: 0;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .animationImage {
+            position: static;
+            transform: none;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .big-number {
+            font-size: 60px;
+        }
+    }
+</style>
+
+   <!-- jfgjkdf -->
+
+    <!-- Start Categories  -->
+
+  <style>
+    .container4 {
+        display: flex;
+    }
+
+    .text7 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+        }
+        .text7 {
+            padding: 20px;
+        }
+    }
+    
+</style>
+
+<section1>
+  <div style = 'margin-top: 100px;'>  
+    <div class="container4">
+        <div class="text7">
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 28px;" >
+                Welcome to Adroit Solutions Limited
+            </p>
+            <div class="row" style="; margin-left: 5px;">
+                        <div class="big-number">_</div>
+                    </div>
+
+            <p style="color: black; font-family: Tahoma; font-size: 80%; font-weight: bold;" >
+               Adroit is a software development company headquartered in Nigeria, with office in Nigeria- Adroit Solutions Ltd. It has been successfully operating for almost 20 years and currently employs more than 50 qualified software engineers and managers.
+            </p>
+            <p style="margin-top: 10px; color: black; font-family: Tahoma; font-size: 80%; " >
+               Adroit develops custom software solutions based on a range of platforms and technologies, including Windows, Unix, Oracle, JAVA, BIRT, Linux, .Net, J2EE, J2SE, DROOLS and other ETL Tools. Our enviable reputation and success in providing pragmatic quality solutions for complex IT projects has resulted in high volume of business.
+            </p>
+        </div>
+        <div style="flex: 1;" class="unique-image-container">
+            <img src="{% static 'shop/images/adroit/adroitreal.png' %}" style="width: 100%; border-radius: 10px;" alt="Image">
+        </div>
+    </div>
+  </div>
+</section1>
+
+    <!-- end Categories  -->
+
+   <!-- start container 1 -->
+  <style type="text/css">
+    .d1{
+      border: 1px solid #ccc; /* Add a border for a modern look */
+      border-radius: 8px; /* Rounded corners */
+      padding: 20px; /* Add some padding inside the box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+      padding: 0px;
+    }
+</style>
+   <!-- start container 1 -->
+   <div style="display: flex; justify-content: center; align-items: center; margin-top: 100px;">
+       <p style="font-weight: bold; font-size: 30px; color: black;  font-family: Times New Roman;">Explore Our Solutions
+       </p>
+  </div>
+       <p style="font-weight: bold; font-size: 15px; margin-bottom: -30px; padding: 10px; color:#02112e;">By Industry
+       </p>
+<div class="row my-5" style="padding: 20px;">
+    <div class="col-sm-6 col-lg-4 d1">
+        <div class="service-block-inner">
+             <img src="{% static 'shop/images/icon/icon1.png' %}" alt="Icon" class="icon">
+            <h3 style="font-size: 14px; color: #0e0eb2;">Advertising & Marketing</h3>
+            <p style="font-size: 13px; font-family: Arial;">Achieve cost-efficiency for petabyte-scale analytics and single-digit millisecond latency workloads.</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d1">
+        <div class="service-block-inner">
+            <img src="{% static 'shop/images/icon/icon2.png' %}" alt="Icon" class="icon">
+            <h3 style="font-size: 14px; color: #0e0eb2;">Financial Services</h3>
+            <p style="font-size: 13px;font-family: Arial;">Less cost. More resiliency. Explore ADROIT solutions across banking, payments, capital markets, and insurance.</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d1">
+        <div class="service-block-inner">
+            <img src="{% static 'shop/images/icon/icon4.png' %}" alt="Icon" class="icon">
+            <h3 style="font-size: 14px; color: #0e0eb2;">Education</h3>
+            <p style="font-size: 13px;font-family: Arial;">Personalize student-learning experiences, access applications from anywhere, and improve learning.</p>
+        </div>
+    </div>
+</div>
+<!-- <p href="{% url 'developers_and_property_managers' %}" style="font-weight: bold; font-size: 15px; margin-bottom: -30px; margin-top: -30px; padding: 20px; color:#02112e; display: flex; align-items: end; justify-content: end; color: #0e0eb2; text-decoration: underline;">View All Industries  >>
+       </p> -->
+<!-- End container 1 -->
+  <!-- start container 1 -->
+       <p style="font-weight: bold; font-size: 15px; margin-bottom: -30px; padding: 10px; color: #02112e;">By Technology Category
+       </p>
+<div class="row my-5" style="padding: 20px;">
+    <div class="col-sm-6 col-lg-4 d1">
+        <div class="service-block-inner">
+             <img src="{% static 'shop/images/icon/icon5.png' %}" alt="Icon" class="icon">
+            <h3 style="font-size: 14px; color: #0e0eb2;">Analytics & Data Lakes</h3>
+            <p style="font-size: 13px;font-family: Arial;">Analytics & Data Lakes, Securely store, categorize, and analyze all your data in one, centralized repository.</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d1">
+        <div class="service-block-inner">
+            <img src="{% static 'shop/images/icon/icon6.png' %}" alt="Icon" class="icon">
+            <h3 style="font-size: 14px; color: #0e0eb2;">Serverless Computing</h3>
+            <p style="font-size: 13px;font-family: Arial;">Serverless Computing Build and run applications and services without thinking about servers Computing.</p>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d1">
+        <div class="service-block-inner">
+            <img src="{% static 'shop/images/icon/icon7.png' %}" alt="Icon" class="icon">
+            <h3 style="font-size: 14px; color: #0e0eb2;">Storage</h3>
+            <p style="font-size: 13px;font-family: Arial;">Durable, cost-effective options for backup, disaster recovery, and data archiving at petabyte scale.</p>
+        </div>
+    </div>
+</div>
+<!-- <p href="{% url 'developers_and_property_managers' %}" style="font-weight: bold; font-size: 15px; margin-top: -30; margin-bottom: -30px; padding: 20px; color:#02112e; display: flex; align-items: end; justify-content: end; color: #0e0eb2; text-decoration: underline;">View View All Solutions >></p> -->
+
+<!-- End container 1 -->
+<style>
+  .container-row {
+    display: flex;
+    overflow-x: hidden; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .container11 {
+    width: 300px;
+    min-width: 300px;
+    margin: 0 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #020c24!important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Changed to column */
+    justify-content: start;
+    align-items: start;
+  }
+
+  .scroll-btn {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+</style>
+
+ <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; margin-bottom: 10px;">
+       <p style="font-weight: bold; font-size: 30px; color: black;  font-family: Times New Roman;">Explore Our Products
+       </p>
+  </div>
+<section style="font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    background-color: #f4f4f4;">
+  <div class="scroll-btn" id="scrollLeft">&#9664;</div>
+  <div class="container-row" id="containerRow">
+    <!-- Repeat this block 20 times -->
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon12.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Featured Services </p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon13.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Analytics</p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon14.png' %}" alt="Image" width="10px">
+      <p style="color: white;"> Cloud Financial Management </p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon47.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Featured Services </p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon46.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Network & Content Delivery</p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon40.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Storage</p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon42.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Internet of Thing</p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon43.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Database</p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon44.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Security, Identity, & Compliance</p>
+    </div>
+    <div class="container11">
+      <img style="max-width: 20%; height: auto; margin-bottom: 10px;" src="{% static 'shop/images/icon/icon45.png' %}" alt="Image" width="10px">
+      <p style="color: white;">Compute</p>
+    </div>
+    <!-- End of repeat block -->
+  </div>
+  <div class="scroll-btn" id="scrollRight">&#9654;</div>
+
+    <script>
+      const containerRow = document.getElementById('containerRow');
+      const scrollLeftBtn = document.getElementById('scrollLeft');
+      const scrollRightBtn = document.getElementById('scrollRight');
+      const containerItems = document.querySelectorAll('.container11'); // Select all container items
+
+      let scrollAmount = containerItems[0].offsetWidth + 20; // Adjusted scroll amount
+
+      scrollLeftBtn.addEventListener('click', () => {
+        containerRow.scrollLeft -= scrollAmount;
+      });
+
+      scrollRightBtn.addEventListener('click', () => {
+        containerRow.scrollLeft += scrollAmount;
+      });
+    </script>
+</section>
+    <!-- Start Categories  -->
+
+
+    <section>
+        <div class="container2" style="margin-top: 100px;">
+            <div class="content">
+                <p style="font-weight: bold; font-size: 20px; color: red;  font-family: Times New Roman;">Why Adroit Solution?</p>
+                    <div class="row" style="margin-top: -100px!important;">
+                        <div class="big-number">_</div>
+                    </div>
+                    <div class="row">
+                        <!-- <div class="big-number">1</div> -->
+                        <div class="text-content">
+                            <span style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 30px;">Trusted and Endorsed by the Professionals</span>
+
+                            <span style="font-size: 80%; z-index: 100;">Adroit Solutions Ltd is the <span style="color: black; font-weight: bold;">only</span> Software Company endorsed by the accounting governing body,
+                            The Institute of Chartered Accountants in Africa & Wales.</span>
+
+                            <span style="font-size: 80%;  margin-top: 10px; z-index: 100;">It is also used by leading accountancy firms and the global professional accounting body, The Association of Chartered Certified Accountants. And the solution chosen by the ICO, the Nigeria government body responsible
+                            for enforcing Data Protection laws.</span>
+
+                            <span style="font-size: 80%;  margin-top: 10px; z-index: 100; font-weight: bold; color: black;">Adroit Solutions Softwares is a modern, market-leading solution, at an unbeatable low price, that gives you a much lower cost of ownership. It is an agile, flexible platform allowing Governance Risk and Compliance (GRC) and Audit to be integrated across the organisation.</span>
+                        </div>
+                    </div>
+
+
+                   <!--  <div class="row">
+                        <div class="big-number">2</div>
+                        <div class="text-content">
+                            <span style="font-weight: bold; color: black; font-family: Helvetica; font-size: 18px;">FRAUD MANAGEMENT SOLUTION</span>
+                            <span>Real-time screening of transaction activity across users, <br>accounts, processes and channels, to identify and<br> prevent internal and external fraud in an organization.</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="big-number">3</div>
+                        <div class="text-content">
+                            <span style="font-weight: bold; color: black; font-family: Helvetica; font-size: 18px;">FRAUD MANAGEMENT SOLUTION</span>
+                            <span>Real-time screening of transaction activity across users, <br>accounts, processes and channels, to identify and<br> prevent internal and external fraud in an organization.</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="big-number">4</div>
+                        <div class="text-content">
+                            <span style="font-weight: bold; color: black; font-family: Helvetica; font-size: 18px;">FRAUD MANAGEMENT SOLUTION</span>
+                            <span>Real-time screening of transaction activity across users, <br>accounts, processes and channels, to identify and<br> prevent internal and external fraud in an organization.</span>
+                        </div>
+                    </div> -->
+            </div>
+            <div class="image-container">
+                <img class="image1" src="{% static 'shop/images/Trusted/money.jpg' %}" alt="Image 1">
+                <div class="animationImage" style="background-image: url('{% static 'shop/images/Banners/home_banner_1.jpg' %}')"></div>
+            </div>
+        </div>
+        <div class="circle-animation"></div>
+    </div>
+    </section>
+
+
+
+    <!-- Start Categories  -->
+  <style>
+    /* Add a wrapper to center the content */
+    .container-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px; /* Gap between containers */
+    }
+
+    /* Style for each container box */
+    .container-box {
+      border: 1px solid #ccc; /* Add a border for a modern look */
+      border-radius: 8px; /* Rounded corners */
+      padding: 20px; /* Add some padding inside the box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+      width: 250px; /* Set a fixed width for each box */
+      text-align: center;
+      height: 300%;
+    }
+
+    .image3 {
+      width: 100px;
+      height: 100px;
+      border-radius: 10%;
+      overflow: hidden;
+      margin: 0 auto; /* Center the image horizontally */
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .text1 {
+      margin-top: 5%;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      background-color: #083590;
+      border-radius: 100px;
+    }
+    .text1:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #083590; /* Add a white border on hover */
+  color: #083590;
+}
+  </style>
+   <div style="margin-top: -80px!important; margin-left: 5px;display: flex; justify-content: center; align-items: center;">
+        <div class="big-number">_____________</div>
+  </div>
+  
+    <!-- end Categories  --> 
+
+    <!-- Start Categories  -->
+  <style>
+    /* Add a wrapper to center the content */
+    .container-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px; /* Gap between containers */
+    }
+
+    /* Style for each container box */
+    .container-box1 {
+/*      border: 1px solid #ccc; /* Add a border for a modern look */*/
+      border-radius: 25px; /* Rounded corners */
+      padding: 20px; /* Add some padding inside the box */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+      width: 350px; /* Set a fixed width for each box */
+      text-align: center;
+      height: 300px;
+    }
+
+    .image3 {
+      width: 100px;
+      height: 100px;
+      border-radius: 10%;
+      overflow: hidden;
+      margin: 0 auto; /* Center the image horizontally */
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .text1 {
+      margin-top: 5%;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      background-color: #083590;
+      border-radius: 100px;
+    }
+    .text1:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #083590; /* Add a white border on hover */
+  color: #083590;
+}
+  </style>
+  
+  <div style="display: flex; justify-content: start; align-items: start; margin-left: 40px; margin-top: 30px;">
+       <p style="font-weight: bold; font-size: 20px; color: red;  font-family: Times New Roman;">What we Provide
+       </p>
+  </div>
+        <div style="margin-top: -80px; margin-left: 45px;display: flex; justify-content: start; align-items: start; ">
+        <div class="big-number">___</div>
+  </div>
+  <div class="container-wrapper">
+    <!-- First Container -->
+    <div class="container-box1">
+      <div class="container5" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
+        <div class="image3">
+          <a href="#">
+            <img src="{% static 'shop/images/icon/web-design.png' %}" alt="Image 1">
+          </a>
+        </div>
+        <p style="font-weight: bold; color: black; font-size: 20px; font-family: Times New Roman;">Fully Customisable <p>
+            <span style="font-size: 12px;  font-family: sans-serif;">Adroit Solutions are fully customisable to your organisations requirements. We give you all the power to decide how the Solutions should Look and Feel.</span>
+      </div>
+    </div>
+
+    <!-- Second Container -->
+    <div class="container-box1">
+      <div class="container5" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
+        <div class="image3">
+          <a href="#">
+            <img src="{% static 'shop/images/icon/checked.png' %}" alt="Image 1">
+          </a>
+        </div>
+        <p style="font-weight: bold; color: black; font-size: 20px; font-family: Times New Roman;">Complete Solution<p>
+            <span style="font-size: 12px; font-family: sans-serif;">Governance, Risk, Compliance (GRC) & Audit Management Software that lets you combine and share data across the entire Solution to get a holistic view of your organisations most pressing issues.</span>
+      </div>
+    </div>
+
+
+    <!-- Third Container -->
+    <div class="container-box1">
+      <div class="container5" onmouseover="animateImage(this)" onmouseout="resetImage(this)">
+        <div class="image3">
+          <a href="#">
+            <img src="{% static 'shop/images/icon/support.png' %}" alt="Image 1">
+          </a>
+        </div>
+        <p style="font-weight: bold; color: black; font-size: 20px; font-family: Times New Roman;">Teamwork<p>
+            <span style="font-size: 12px;  font-family: sans-serif;">Collaborate online with colleagues, give ownership of tasks, actions and issues. <span style="color: black; font-weight: bold;">Automated Emails and Reminders</span> ensure everyone's informed.</span>
+      </div>
+    </div>
+</div>
+  <script>
+    function animateImage(container) {
+      const image = container.querySelector('img');
+      image.style.transform = 'scale(1.2)';
+    }
+
+    function resetImage(container) {
+      const image = container.querySelector('img');
+      image.style.transform = 'scale(1)';
+    }
+  </script>
+
+    <!-- end Categories  -->
+
+    <style>
+    .container4 {
+        display: flex;
+    }
+
+    .text5 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text5 {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+</style>
+
+    <!-- start Categories  -->
+<style>
+    .container4 {
+        display: flex;
+    }
+
+    .text5 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text5 {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+</style>
+
+<section1 >
+    <div class="container4" style= "margin-top:-70px; padding: 10%;">
+        <div style="flex: 1;">
+            <img src="{% static 'shop/images/adroit/adroit7.png' %}" style="width: 100%;" alt="Image">
+        </div>
+        <div class="text5">
+            <p style="font-weight: bold; color: black; font-family: Times New Roman ; font-size: 40px;" >
+               What our <br>
+               customers have to say
+            </p>
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 20px;" >
+            ⭐⭐⭐⭐⭐
+            </p>
+
+            <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">__</div>
+                    </div>
+
+            <p style="color: black; font-family: Times New Roman; font-size: 26px;" >
+               “Adroit Solutions Limited was worth a fortune to my Startup. Keep up the excellent work.!”
+            </p>
+        </div>
+    </div>
+</section1>
+
+    <!-- end Categories  -->
+<!-- start Categories  -->
+
+
+    <!-- end Categories  -->
+
+
+    <!-- start Categories  -->
+<section style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; margin-top: -10%;">
+  <div class="container7" style="margin-top: 100px;">
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/28474384.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold; color: #083590; font-family: Times New Roman;">Business Consulting</h2>
+        <p>We help businesses grow, help in consultation give you ideas on softwares that would automate your processes and aid faster and accurate decision making.</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/30437459.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px;  font-weight: bold;  color: #083590; font-family: Times New Roman;">Software/Web Development</h2>
+        <p>Our consultants have delivered several projects for customers throughout the world and have the breadth and depth of technical expertise and experience to deliver high quality at reasonable cost while minimizing risk. We can help you achieve your time to market requirements while addressing any skills shortages</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/295917.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold;  color: #083590;font-family: Times New Roman;">Training Audit</h2>
+        <p>Provide assurance that a management framework is in place for training activities and that it is implemented and monitored.</p>
+      </div>
+    </div>
+    <!-- The fourth box will wrap to the next row automatically -->
+  </div>
+</section>
+
+<style type="text/css">
+.container7 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 50px auto;
+  background-color: white;
+  flex-wrap: wrap; /* Add flex-wrap property to wrap boxes to the next row */
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.box {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 8px 20px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Added transition for smooth animation */
+  min-width: 280px; /* Add a minimum width to avoid squeezing on smaller screens */
+}
+
+.text {
+  text-align: center;
+  font-family: Helvetica;
+  color: black;
+  font-size: 12px;
+}
+
+.icon-container {
+  display: inline-block;
+}
+
+.icon {
+  width: 50px; /* Adjust the size of the icon as needed */
+  height: 50px;
+}
+
+/* Add hover effect for the boxes */
+.box:hover {
+  transform: translateY(-5px) scale(1.05); /* Scale up and move up on hover */
+}
+
+/* Add media query for phone version */
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%; /* Change width to 100% for single column layout */
+  }
+}
+</style>
+
+
+    <!-- end Categories  -->
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+      this.querySelector('.plus-minus').textContent = '+';
+    } else {
+      panel.style.display = "block";
+      this.querySelector('.plus-minus').textContent = '-';
+    }
+  });
+}
+</script>
+<style>
+.container20 {
+        max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 29%);
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .plus-minus {
+    margin-left: 0%!important;
+  }
+}
+</style>
+
+        <!-- Add CSS styling for the modal -->
+        <style>
+            /* Modal Styling */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <!-- JavaScript functions for opening and closing the modal -->
+        <script>
+            var modal = document.getElementById("myModal");
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+
+            function openModal() {
+                modal.style.display = "block";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+        </script>
+            </p>
+          </div>
+        </div>
+
+        </div>
+    </div>
+</section1>
+    <!-- end Categories  -->
+    <style>
+        .banner-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 5%;
+    align-items: start;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('{% static 'shop/images/Banners/african-american-man-sitting-desk-smiles.jpg' %}');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Adjust the color and opacity here */
+    opacity: 0.7; /* Adjust the opacity value (0 to 1) */
+    z-index: 0;
+}
+
+.centered-text {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    /*  background-color: rgba(0, 0, 0, 0.7);*/
+    border-radius: 10px;
+}
+    </style>
+<div class="banner-container">
+    <span class="banner-content">
+        <div style="">  
+            <div class="centered-text">
+                <div class="col-md-12" style="margin-top: 5%; margin-bottom: 10px;">
+                    <h1  style="font-size: 30px; color: white; font-family: Helvetica;" class="m-b-20"><strong>Experience Automation & Control<br> 
+                    Fraud detection & Exception<br>
+                     management solutions</strong>
+                    <br>
+                    Anti-Money Laundery Solution Provider</h1>
+                    <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">__</div>
+                    </div>
+                    <p class="m-b-40" style="font-family: Helvetica; font-size: 15px;">
+                     As a company, we work hard to improve our offerings from time to time to<br> 
+                     give our clients the best experience.</p>
+                    <p><a href="{% url 'contact-us' %}" class="explore-link" >Get In Touch</a></p>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+
+    <!-- end Categories  -->
+
+ <div class="row" style="margin-top: -10%!important; margin-left: 5px; display: flex; justify-content: center; align-items: center;">
+                        <div class="big-number">_______________</div>
+                    </div>
+
+
+    <!-- Start Categories  -->
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <!-- End Products  -->
+
+    <!-- Start Blog  -->
+    
+    <!-- End Blog  -->
+
+    {% endblock content %}

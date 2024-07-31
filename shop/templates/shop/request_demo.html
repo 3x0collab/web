@@ -1,0 +1,153 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+    <!-- Start All Title Box -->
+    <div class="all-title-box" style="height: 300px; background-image: url('{% static 'shop/images/Banners/light-trails-buildings.jpg' %}');">
+        
+        <div class="container" style=" ">
+            <div class="row">
+                <div class="col-lg-12" style="margin-top: 4%;">
+                    <h2>Request a Demo Today </h2>
+                </div>
+                <h3  style="color: white; margin-left: 1.2%; font-size: 25px!important;">Let us know how we can <span style="color: red;">help</span>.</h3>
+            </div>
+            <div class="circle-animation"></div>
+            <div class="circle-animation1"></div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+     <style>
+        .custom-video {
+            border-radius: 30px;
+        }
+    </style>
+    <div class="container" style="margin-top: 15px;">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <video class="img-fluid custom-video" autoplay loop muted>
+                    <source src="{% static 'shop/images/Banners/todayic.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h1 style="font-weight: bold; text-align: center; color: #020c24!important; text-decoration: underline;"> iConcept4Pro</h1>
+            </div>
+            <div class="col-md-6 mb-4">
+                <video class="img-fluid custom-video" autoplay loop muted>
+                    <source src="{% static 'shop/images/Banners/today.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h1 style="font-weight: bold; text-align: center; color: #020c24!important; text-decoration: underline;"> RADARPRO</h1>
+            </div>
+            <div class="col-md-6 mb-4">
+                <video class="img-fluid custom-video" autoplay loop muted>
+                    <source src="{% static 'shop/images/Banners/todaefass.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h1 style="font-weight: bold; text-align: center; color: #020c24!important; text-decoration: underline;"> EFASS</h1>
+            </div>
+            <div class="col-md-6 mb-4">
+                <video class="img-fluid custom-video" autoplay loop muted>
+                    <source src="{% static 'shop/images/Banners/save3.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h1 style="font-weight: bold; text-align: center; color: #020c24!important; text-decoration: underline;"> CHECKLIST</h1>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Start Contact Us  -->
+    <div class="contact-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="contact-form-right">
+                        <h2 style="font-family: Times New Roman;">REQUEST A DEMO</h2>
+                        <p>Demo link will be sent to your email address, ensure you input the correct email.</p>
+                        <form id="contactForm" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required data-error="Please enter your Subject">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message" rows="4" data-error="Write your message" required>REQUEST A DEMO : </textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="submit-button text-center">
+                                        <button class="btn hvr-hover" id="submit" type="submit" style="border-radius: 10px; background: #083590!important;">Send Message</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <script>
+                            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                event.preventDefault();
+
+                                let formData = new FormData(this);
+
+                                fetch("{% url 'contact-us' %}", {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-CSRFToken': '{{ csrf_token }}'
+                                    },
+                                    body: formData
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        alert('Message sent successfully!');
+                                        location.reload();  // Refresh the page
+                                    } else {
+                                        alert('There was an error sending your message. Please try again.');
+                                    }
+                                })
+                                .catch(error => console.error('Error:', error));
+                            });
+                        </script>
+                    </div>
+                </div>
+				<div class="col-lg-4 col-sm-12">
+                    <div class="contact-info-left">
+                        <h2 style="font-family: Times New Roman;">CONTACT INFO</h2>
+                        <p style="font-family: sans-serif; font-size: 80%; font-weight: bold;">If you have any questions or need further assistance, please feel free to reach out to us:</p>
+                        <ul>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-map-marker-alt"></i>Address: <br>Location,<br>Nigeria</p>
+                            </li>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-6397972713">+234-0000 000 00</a></p>
+                            </li>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">@gmail.com</a></p>
+                            </li>
+                        </ul>
+                        <p style="font-family: sans-serif; font-size: 80%; font-weight: bold;">Our team is available Monday through Friday from 8:00 AM to 5:00 PM. We look forward to hearing from you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Cart -->
+{% endblock content %}

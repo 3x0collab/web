@@ -1,0 +1,502 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+<!-- example_template.html -->
+
+<style>
+.explore-link {
+  background-color: #083590; /* Background color (you can change this to your desired color) */
+  padding: 10px 20px; /* Add padding to the link */
+  border-radius: 20px; /* Add border radius to give rounded corners */
+  color: #ffffff; /* Text color */
+  font-size: 15px!important;
+  text-align: center;
+  display: inline-block; /* Make the link inline block to adjust width */
+  width: 250px; /* Set a specific width for the link (you can change this to your desired width) */
+}
+
+.explore-link:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #ffffff; /* Add a white border on hover */
+}
+
+</style>
+
+    <!-- Start Slider -->
+     <!-- end Categories  -->
+    <style>
+        .banner-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 5%;
+    align-items: start;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('{% static 'shop/images/Banners/low-angle-view-skyscrapers.jpg' %}');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Adjust the color and opacity here */
+    opacity: 0.7; /* Adjust the opacity value (0 to 1) */
+    z-index: 0;
+}
+
+.centered-text {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    color: white;
+    font-size: 24px;
+    padding: 70px;
+    /*  background-color: rgba(0, 0, 0, 0.7);*/
+    border-radius: 10px;
+}
+    </style>
+<div class="banner-container">
+    <span class="banner-content">
+        <div style="">  
+            <div class="centered-text bay1">
+                <div class="col-md-12" style="margin-top: 5%; margin-bottom: 10px;">
+                    <h1  style="font-size: 40px; color: white; font-family: Times New Roman;" class="m-b-20"><strong>Product Overview</strong>
+                    <br>
+                     Software</h1>
+                    <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">__</div>
+                    </div>
+                    <p class="m-b-40" style="font-family: Times New Roman; font-size: 15px;">
+                     Being an organization, we dedicate ourselves to continual improvement, always<br> 
+                     aiming to enhance our offerings and provide our clients with unparalleled experiences.</p>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+<div class="circle-animation"></div>
+   <!-- End container 1 -->  
+
+   <!-- start container 1 -->
+
+    <!-- Start Categories  -->
+ <!-- Advanced Tech Container</title> -->
+
+<style>
+    section {
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        padding: 50px;
+    }
+
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        flex: 1;
+        padding-right: 50px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image1 {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .animationImage {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: -40%;
+        border-radius: 100px;
+        transform: translate(-50%, -100%);
+        animation: moveUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .big-number {
+        font-size: 80px; /* You can adjust the font size as needed */
+        font-weight: bold; /* You can adjust the font weight as needed */
+        color: #083590;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px; /* Adjust the spacing between the number and the paragraphs */
+    }
+
+    .text-content p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+
+    /* Media query for phone versions */
+    @media screen and (max-width: 767px) {
+        .container2 {
+            flex-direction: column;
+        }
+
+        .content {
+            padding-right: 0;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .animationImage {
+            position: static;
+            transform: none;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .big-number {
+            font-size: 60px;
+        }
+    }
+</style>
+
+
+
+
+    <!-- Start Categories  -->
+
+  <style>
+    .container4 {
+        display: flex;
+    }
+
+    .text7 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+        }
+        .text7 {
+            padding: 20px;
+        }
+    }
+</style>
+
+<section1>
+    <div class="container4" style="margin-top: -5%;">
+        <div class="text7">
+            <div class="row" style="margin-top: -140px!important; margin-left: 5px;">
+                        <div class="big-number">_</div>
+                    </div>
+            <p style=" color: black; font-family: sans-serif; font-weight: bold; font-size: 80%;" >
+                Adroit Solutions Ltd. is a comprehensive web-based construction project management software that provides a thorough set of management functions in a single configurable package.
+            </p>
+
+            <p style=" color: black; font-family: sans-serif; font-size: 80%; margin-top: 4%;" >
+               Designed to support public and private organizations, construction managers, and contractors, Adroit Solutions Ltd. has multiple modules that combine planning, estimating, cost controls, document controls, scheduling, asset management, and workflow into an easy-to-use program. Thus, users have the option to choose one or more of these modules to address any stage of the Plan-Build-Operate life cycle. In fact, many Global Fortune 500 companies and government agencies choose Adroit Solutions Ltd. as their Construction Project Management Software
+            </p>
+            <p style="margin-top: 10px; color: black; font-family: sans-serif; font-size: 80%; " >
+               Furthermore, supporting projects through the entire process, Adroit Solutions Ltd. provides real-time, interactive business intelligence dashboards and reports that are graphic-rich and actionable, comprising all aspects for tracking and managing capital programs, projects, and assets.
+            </p>
+            <style>
+  .container20 {
+   
+    justify-content: space-between;
+  }
+</style>
+
+<div class="container20" style="margin-top: 60px; color: black; font-family: sans-serif; font-size: 80%;">
+  <div>Portfolio, Program, and Project Management</div>
+  <div>100% Web-Based, Zero Footprint, Zero Downloads</div>
+  <div>All-in-One System</div>
+  <div>Business Intelligence Dashboards and Reports</div>
+  <div>Multiple Deployment Options (SaaS, Managed-Host or Self-Host)</div>
+  <div>Device Agnostic (Desktop, Laptop, Tablet, Smartphone)</div>
+  <div>Browser Agnostic (Chrome, Safari, Edge, Firefox, etc.)</div>
+  <div>Out-of-the-Box Ready and Easily Configurable</div>
+  <div>International (Multilingual, Multi-currency)</div>
+</div>
+        </div>
+        <div style="flex: 1;">
+            <img src="{% static 'shop/images/Trusted/pi.png' %}" style="width: 100%; border-radius: 10px;" alt="Image">
+        </div>
+    </div>
+</section1>
+
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+  <div class="row" style="margin-top: 5%!important; display: flex; justify-content: center; align-items: center; background-color: black; padding: 10px;">
+                        <p><a href="#" class="explore-link big-number" style="color: white;">REQUEST A DEMO AND QUOTE</a></p>
+                    </div>
+
+
+<style>
+    .container4 {
+        display: flex;
+    }
+
+    .text5 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text5 {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+</style>
+
+
+
+
+<style type="text/css">
+.container7 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 50px auto;
+  background-color: white;
+  flex-wrap: wrap; /* Add flex-wrap property to wrap boxes to the next row */
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.box {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 8px 20px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Added transition for smooth animation */
+  min-width: 280px; /* Add a minimum width to avoid squeezing on smaller screens */
+}
+
+.text {
+  text-align: center;
+  font-family: Helvetica;
+  color: black;
+}
+
+.icon-container {
+  display: inline-block;
+}
+
+.icon {
+  width: 50px; /* Adjust the size of the icon as needed */
+  height: 50px;
+}
+
+/* Add hover effect for the boxes */
+.box:hover {
+  transform: translateY(-5px) scale(1.05); /* Scale up and move up on hover */
+}
+
+/* Add media query for phone version */
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%; /* Change width to 100% for single column layout */
+  }
+}
+</style>
+
+    <!-- start Categories  -->
+
+
+    <!-- end Categories  -->
+<!-- start Categories  -->
+
+
+    <!-- start Categories  -->
+<style>
+.container20 {
+        max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 29%);
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .plus-minus {
+    margin-left: 0%!important;
+  }
+}
+</style>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+      this.querySelector('.plus-minus').textContent = '+';
+    } else {
+      panel.style.display = "block";
+      this.querySelector('.plus-minus').textContent = '-';
+    }
+  });
+}
+</script>
+
+    <!-- end Categories  -->
+
+    <!-- end Categories  -->
+  <style>
+    /* Styling for the container and logo images */
+    .container1 {
+      display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: inset 1px -1px 14px 3px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Ensure logos outside the container are hidden */
+    }
+
+    .logoContainer {
+      display: flex;
+      overflow: hidden; /* Hide overflowing logos */
+    }
+
+    .logo {
+      width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;
+      margin: 0 10px; /* Adjust the margin between logos as needed */
+      opacity: 0.7; /* Adjust the initial opacity of the logos */
+      transition: opacity 0.3s ease; /* Add a smooth transition effect for opacity changes */
+      animation: slideAnimation 19s linear infinite; /* Adjust the time (in seconds) to change logos */
+    }
+
+    @keyframes slideAnimation {
+      0% {
+        transform: translateX(100%);
+        opacity: 0.7;
+      }
+      10%, 90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0.7;
+      }
+    }
+  </style>
+
+ 
+<!-- End container 1 -->
+
+
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <!-- End Products  -->
+
+    <!-- Start Blog  -->
+    <!-- End Blog  -->
+
+    {% endblock content %}

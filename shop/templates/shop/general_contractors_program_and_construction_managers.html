@@ -1,0 +1,217 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box banner11">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 bay1" style="margin-top: 4%;">
+                    <h2 style="font-size: 40px; display: contents;">Contractors, Program and <span style="color: red;">Construction Managers</span></h2>
+                </div>
+                <!-- <h3  style="color: white; margin-left: 1.2%; font-size: 25px!important;">A customer-focused <span style="color:red;"> digital solutions</span> and <span style="color: red;">services</span> company.</h3> -->
+            </div>
+            <div class="circle-animation"></div>
+            <div class="circle-animation1"></div>
+        </div>
+    </div>
+    
+<style>
+    /* Styling for the container and logo images */
+    .container1 {
+      display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: inset 1px -1px 14px 3px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Ensure logos outside the container are hidden */
+    }
+
+    .logoContainer {
+      display: flex;
+      overflow: hidden; /* Hide overflowing logos */
+    }
+
+    .logo {
+      width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;
+      margin: 0 10px; /* Adjust the margin between logos as needed */
+      opacity: 0.7; /* Adjust the initial opacity of the logos */
+      transition: opacity 0.3s ease; /* Add a smooth transition effect for opacity changes */
+      animation: slideAnimation 19s linear infinite; /* Adjust the time (in seconds) to change logos */
+    }
+
+    @keyframes slideAnimation {
+      0% {
+        transform: translateX(100%);
+        opacity: 0.7;
+      }
+      10%, 90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0.7;
+      }
+    }
+  </style>
+
+
+    <!-- End All Title Box -->
+
+    <!-- Start About Page  -->
+    <div class="about-box-main">
+        <div class="container">
+            <div class="row">
+				
+                <div class="col-lg-6">
+                    <h2 class="noo-sh-title-top" style="font-family: Times New Roman;">The World’s Largest Program and Construction Management Firms Use Adroit Solutions Ltd</h2>
+                    <p style="font-family: sans-serif; font-size: 80%;">CGeneral contractors, program managers, and construction managers need to be nimble enough to respond to the challenges they face every day. Adroit Solutions Ltd’s Program and Construction Project Management Software provides Visual Workflow, Risk Analysis, Procurement/Online Bidding, Resource Availability, Portfolio Planning, CPM Scheduling, Claim Analysis, and more. And because all of Adroit Solutions Ltd’s features are tightly integrated, there is a single sign-on for all users, automatic notification of deadlines, and collaboration, all without duplicate data entry.</p>
+                    <p style="font-family: sans-serif; font-size: 80%;">Adroit Solutions Ltd is a module-based system that provides complete flexibility for clients to grow into the system based on their needs. Contractors, program, and construction managers typically opt to deploy Adroit Solutions Ltd with the following features. Your organization may have different deployment needs and requirements for Adroit Solutions Ltd’s industry-leading software.</p>
+					<!-- <a class="btn hvr-hover" href="#" style="border-radius: 10px; background: #083590!important;">Read More</a> -->
+                    <div class="circle-animation1"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner-frame"> <img class="img-fluid" src="{% static 'shop/images/Banners/save3.png' %}" alt="company"  style="
+    border-radius: 30px;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <style>
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
+            margin-left: 10px;
+        }
+
+        .feature-item {
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .feature-item {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .feature-item {
+                width: 100%;
+            }
+        }
+    </style>
+<section style="font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;">
+    <h1 style="color: #083590; font-weight: bold; display: flex; justify-content: center; align-items: center; margin-bottom: 10px; margin-top: -60px;">Common Features Used by Contractors, Program Managers, and Construction Managers</h1>
+    <ul class="feature-list">
+        <li class="feature-item">✔️ Portfolio Planning</li>
+        <li class="feature-item">✔️ Risk Analysis</li>
+        <li class="feature-item">✔️ Conceptual Estimating</li>
+        <li class="feature-item">✔️ Assembly Estimating</li>
+        <li class="feature-item">✔️ Procurement/Online Bidding</li>
+        <li class="feature-item">✔️ Kanban-Style Activity Boards</li>
+        <li class="feature-item">✔️ Standard Engineering Forms</li>
+        <li class="feature-item">✔️ Inspection Records</li>
+        <li class="feature-item">✔️ Funding</li>
+        <li class="feature-item">✔️ Forecasting</li>
+        <li class="feature-item">✔️ Cash Flow</li>
+        <li class="feature-item">✔️ CPM Scheduling</li>
+        <li class="feature-item">✔️ Asset Explorer</li>
+        <li class="feature-item">✔️ Predictive Maintenance</li>
+        <li class="feature-item">✔️ Work Orders</li>
+        <li class="feature-item">✔️ Leasing</li>
+        <li class="feature-item">✔️ Space Management</li>
+        <li class="feature-item">✔️ Inventory Management</li>
+        <li class="feature-item">✔️ Resource Availability</li>
+        <li class="feature-item">✔️ Visual Workflow</li>
+        <li class="feature-item">✔️ Timesheets</li>
+        <li class="feature-item">✔️ Custom Form Builder</li>
+        <li class="feature-item">✔️ Integration Manager</li>
+        <li class="feature-item">✔️ BIM Integration</li>
+        <li class="feature-item">✔️ Claim Analysis</li>
+    </ul>
+</section>
+ <!-- Start Blog  -->
+    <div class="latest-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1 style="color: #083590;">Case Studies</h1>
+                        <p style="font-family: sans-serif; font-size: 80%;"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="img-fluid" src="{% static 'shop/images/Banners/save3.png' %}" alt="" />
+                        </div>
+                        <div class="blog-content">
+                            <div class="title-blog">
+                                <h3>Company Website Tagline:</h3>
+                                <p style="font-family: sans-serif; font-size: 80%;">Empower educational construction with Adroit Solutions Ltd. Our specialized software ensures precise project management, optimizing every aspect of the process.</p>
+                            </div>
+                            <!-- <ul class="option-blog">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="img-fluid" src="{% static 'shop/images/Banners/save3.png' %}" alt="" />
+                        </div>
+                        <div class="blog-content">
+                            <div class="title-blog">
+                                <h3>LinkedIn Company Description:</h3>
+                                <p style="font-family: sans-serif; font-size: 80%;"> Education Construction Project Management Software, revolutionizing how institutions plan, execute, and accomplish construction endeavors efficiently and flawlessly.</p>
+                            </div>
+                            <!-- <ul class="option-blog">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="img-fluid" src="{% static 'shop/images/Banners/save3.png' %}" alt="" />
+                        </div>
+                        <div class="blog-content">
+                            <div class="title-blog">
+                                <h3>Promotional Email Subject:</h3>
+                                <p style="font-family: sans-serif; font-size: 80%;">Unveiling Adroit Solutions: Transforming Education Construction Management with Innovative Software! Discover seamless project control and success enhancement today.</p>
+                            </div>
+                            <!-- <ul class="option-blog">
+                                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#"><i class="far fa-comments"></i></a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Blog  -->
+    
+    <!-- End About Page -->
+
+{% endblock content %}

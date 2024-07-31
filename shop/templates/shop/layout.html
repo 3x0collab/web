@@ -1,0 +1,885 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+    </script>
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Adroit Solutions Ltd.</title>
+    <meta name="keywords" content="Python3, Django, Ecommerce, Gleomento, Ritvik Dayal, Ritvik">
+    <meta name="description" content="Ecommerce System developed using Django Framework">
+    <meta name="author" content="Ritvik Dayal">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'shop/images/Trusted/save3.png' %}" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7246162cf2.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" href="{% static 'shop/images/images-removebg-preview.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'shop/css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'shop/css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'shop/css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.shop/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Java script -->
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+        
+        function getToken(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }   
+            }
+            return cookieValue;
+        }
+        const csrftoken = getToken('csrftoken');
+
+        function getCookie(name){
+            // getting all the cookies from
+            var cookieArr = document.cookie.split(";");
+
+            // looping through all cookies to find ours
+            for(var i=0; i < cookieArr.length; i++){
+                var cookiePair = cookieArr[i].split("=");
+
+                // removing starting whitepace and comparing names
+                if(name == cookiePair[0].trim()){
+                    // Decoding cookie value and return
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+
+            return null; //if cookie not found
+        }
+
+        var cart = JSON.parse(getCookie('cart'))
+
+        if (cart == undefined) {
+            cart = {}
+            console.log('Cart was created!')
+            document.cookie = 'cart='+ JSON.stringify(cart)+";domain=;path=/"
+        }
+
+        console.log('Cart: ',cart);
+
+    </script>
+    <style type="text/css">
+        /* Default styles for both phone and PC */
+.banner11 {
+  background-image: url('{% static 'shop/images/Banners/light-trails-buildings.jpg' %}');
+  background-size: cover;
+}
+
+/* Media query for phone */
+@media screen and (max-width: 767px) {
+  .banner11 {
+    height: 400px;
+  }
+}
+
+/* Media query for PC */
+@media screen and (min-width: 768px) {
+  .banner11 {
+    height: 300px;
+  }
+}
+
+    </style>
+<style type="text/css">
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        .bay {
+          animation: fadeIn 2s ease-in-out;
+        }
+        .bay1 {
+          animation: fadeIn 8s ease-in-out;
+        }
+        #loading-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            animation: fadeIn 0.2s ease-in-out;
+        }
+
+        .record-signal {
+            width: 80px;
+            height: 80px;
+            border: 6px solid #3498db; /* Blue color */
+            border-radius: 50%;
+            animation: recordAnimation 1s linear infinite;
+        }
+
+        .record-signal:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-color: #e74c3c; /* Red color */
+            border-radius: 50%;
+            animation: pulseAnimation 2s ease-in-out infinite;
+        }
+
+        @keyframes recordAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulseAnimation {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.8);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #loading-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0);
+            z-index: 9999;
+            animation: fadeIn 0.2s ease-in-out;
+        }
+
+        #page-content, #loading-overlay {
+            display: none;
+        }
+
+        #loading-overlay.active {
+            display: flex;
+        }
+
+        #page-content.active {
+            display: block;
+        }
+
+        #blank-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9998;
+        }
+    </style>
+    <style>
+    .circle-animation {
+        width: 50px;
+        height: 50px;
+        background-color: #083590;
+        border-radius: 50%;
+        position: relative;
+        animation: upDown 7s infinite;
+    }
+
+    @keyframes upDown {
+        0%, 100% {
+            top: 0;
+        }
+        50% {
+            top: 300px; /* Adjust this value to control the height of the animation */
+        }
+    }
+</style>
+
+    <style>
+    .circle-animation1 {
+        width: 15px;
+        height: 15px;
+        background-color: #083590;
+        border-radius: 50%;
+        position: absolute;
+        animation: upDown 7s infinite;
+    }
+
+    @keyframes upDown {
+        0%, 100% {
+            top: 0;
+        }
+        50% {
+            top: 300px; /* Adjust this value to control the height of the animation */
+        }
+    }
+</style>
+
+<style>
+.jj {
+  background-color: #083590; /* Background color (you can change this to your desired color) */
+  padding: 10px 20px; /* Add padding to the link */
+  border-radius: 20px; /* Add border radius to give rounded corners */
+  color: #ffffff; /* Text color */
+  font-size: 15px!important;
+  text-align: center;
+  display: inline-block; /* Make the link inline block to adjust width */
+  width: 120%; /* Set a specific width for the link (you can change this to your desired width) */
+   font-family: Helvetica; font-size: 15px;"
+}
+.drup {
+  border-radius: 10%!important; 
+  background-color: #083590!important;
+}
+
+@media screen and (max-width: 993px) {
+  .drup {
+    border-radius: 0%!important; 
+    background-color: #083590!important;
+  }
+}
+
+.jj:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #083590; /* Add a white border on hover */
+  color: #083590!important;
+}
+.nav-link:hover {
+  background-color: transparent; /* Make the background transparent on hover */ /* Add a white border on hover */
+  color: #083590!important;
+}
+
+@media screen and (max-width: 993px) {
+  .jj {
+    display: none;
+  }
+}
+@media screen and (max-width: 993px) {
+  .top-search {
+    display: none;
+  }
+}
+@media screen and (max-width: 993px) {
+  .adriot {
+    display: none;
+  }
+}
+
+/* Styles for PCs */
+@media screen and (min-width: 994px) {
+    .pc{
+      width: 900px;
+      display: none;
+      opacity: 1;
+      margin-left: -400px;
+       word-wrap: break-word
+    }
+    .pcs{
+      width: 500px;
+    }
+    .lil{
+        color: white!important; 
+        background-color: red; 
+        border-radius:10px; 
+        font-weight: bold;
+    }
+.lil:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid white; /* Add a white border on hover */
+  color: white!important;
+}
+  /* Add styles specific to PCs here */
+}
+
+/* Styles for phones */
+@media screen and (max-width: 993px) {
+  /* Add styles specific to phones here */
+}
+
+</style>
+
+
+    
+<body>
+    <!-- <div id="blank-overlay"></div>
+    <div id="loading-overlay">
+        <div class="record-signal"></div>
+    </div> -->
+    <!-- Start Main Top -->
+    
+    <!-- End Main Top -->
+
+    <!-- Start Main Top -->
+    <!-- Start Main Top -->
+
+    <!-- Start Main Top -->
+    
+<style type="text/css">
+    /* Custom CSS for Dropdown Container */
+.dropdown-menu-container {
+    padding: 15px;
+    background-color: #083590; /* Background color for the dropdown container */
+    border: 1px solid #e0e0e0; /* Border for the dropdown container */
+    border-radius: 30px; /* Rounded corners for the dropdown container */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.9); /* Box shadow for a subtle elevation */
+}
+
+/* Custom CSS for Dropdown Columns */
+.dropdown-column {
+    padding: 10px;
+}
+
+/* Optional: Customize font and color for dropdown items */
+.dropdown-item {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.dropdown-item:hover {
+    color: red!important; /* Change color on hover */
+    background-color: #083590;
+}
+
+@media screen and (min-width: 768px) {
+  /* Add your styles for the PC version here */
+  .pc-version a{
+    display: block; /* or any other appropriate display property */
+  }
+
+  /* Hide content on phones */
+  .phone-version a {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Add your styles for the phone version here */
+  .phone-version a {
+    display: block; /* or any other appropriate display property */
+  }
+
+  /* Hide content on PCs */
+  .pc-version  {
+    display: none!important;
+  }
+}
+</style>
+<style>
+    /* Styles for PC version */
+@media screen and (min-width: 768px) {
+  .navbarkk {
+    background-color: #020c24!important;
+  }
+  .hg {
+    background-color: white;
+    border-radius: 10px;
+    height: 60px;
+  }
+}
+
+
+/* Styles for mobile version */
+@media screen and (max-width: 767px) {
+  .navbarkk {
+    height: 90px;
+    background-color: #020c24!important;
+  }
+  .hg {
+    background-color: white;
+    border-radius: 10px!important;
+    style="display: flex!important;
+    -ms-flex-wrap: wrap!important;
+    flex-wrap: wrap!important;
+    -ms-flex-align: center!important;
+    align-items: normal!important;
+    -ms-flex-pack: justify;
+    justify-content: space-between!important;
+  }
+}
+
+</style>
+    <script>
+        function resizeContainer() {
+            const container = document.getElementById('container');
+            container.style.width = window.innerWidth * 0.8 + 'px';
+            container.style.height = window.innerHeight * 0.8 + 'px';
+        }
+
+        window.addEventListener('resize', resizeContainer);
+        window.addEventListener('load', resizeContainer);
+    </script>
+
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav navbarkk">
+            <div class="container hg">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <style type="text/css">
+                        .responsive-img {
+                            width: 48px;
+                            margin-left: 0;
+                        }
+
+                        @media only screen and (max-width: 600px) {
+                            .responsive-img {
+                                width: 48px!important;
+                                margin-left: 30px; /* Adjust or remove margin as needed */
+                            }
+                        }
+                    </style>
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'shop/images/Trusted/save3.png' %}" class="responsive-img" style="width: 45px;" alt="">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}" style="font-weight: 550!important;">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 550!important;">
+                                Company
+                            </a>
+                            <ul class="drup dropdown-menu" aria-labelledby="servicesDropdown">
+                                <!-- Add your services links here -->
+                                <li><a class="dropdown-item" href="{% url 'about' %}" style="color: white;">About Us</a></li>
+                                <li><a class="dropdown-item" href="{% url 'our-commitments' %}" style="color: white;">Our Commitments</a></li>
+                                <li><a class="dropdown-item" href="{% url 'careers' %}" style="color: white;">Careers</a></li>
+                                <!-- Add more services as needed -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 550!important;" >
+                                 SOLUTIONS
+                            </a>
+                            <ul class="dropdown-menu drup" aria-labelledby="solutionsDropdown" >
+                                <!-- Add your solutions links here -->
+                                <li><a class="dropdown-item" href="{% url 'iConcept4_Pro' %}" style="color: white;" >iConcept4Pro</a></li>
+                                <li><a class="dropdown-item" href="{% url 'RadraPro' %}" style="color: white;">RADARPRO</a></li>
+                                <li><a class="dropdown-item" href="{% url 'efass' %}" style="color: white;">EFASS</a></li>
+                                <li><a class="dropdown-item" href="#" style="color: white;">Checklist</a></li>
+                                <!-- Add more solutions as needed -->
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 550!important;">
+                                SERVICES
+                            </a>
+                            <ul class="dropdown-menu drup" aria-labelledby="servicesDropdown">
+                                <!-- Add your services links here -->
+                                <li><a class="dropdown-item" href="{% url 'Asset_Management' %}" style="color: white;">ASSET MANAGEMENT</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Banking' %}"style="color: white;">BANKING</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Funds' %}"style="color: white;">FUNDS</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Insurance' %}" style="color: white;">INSURANCE</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Pensions' %}" style="color: white;">PENSIONS</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Wealth_Management' %}" style="color: white;">WEALTH MANAGEMENT</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Product_Overview' %}" style="color: white;">PRODUCT OVERVIEW</a></li>
+                                <!-- Add more services as needed -->
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown phone-version">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 550!important;">
+                                Industry
+                            </a>
+                            <ul class="dropdown-menu drup" aria-labelledby="servicesDropdown">
+                                <!-- Add your services links here -->
+                                <li><a class="dropdown-item" href="#" style="color: white;">❂ Education</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Healthcare' %}" style="color: white;">❂ Healthcare</a></li>
+                                <li><a class="dropdown-item" href="{% url 'retail_and_banking' %}" style="color: white;">❂ Retail and Banking</a></li>
+                                <li><a class="dropdown-item" href="{% url 'hospitality_industry' %}" style="color: white;">❂ Hospitality</a></li>
+                                <li><a class="dropdown-item" href="{% url 'manufacturing_and_technology_industry' %}" style="color: white;">❂ Manufacturing Technology</a></li>
+                                <li><a class="dropdown-item" href="{% url 'energy_and_resources_industry' %}" style="color: white;">❂ Energy and Resources</a></li>
+                                <li><a class="dropdown-item" href="{% url 'government' %}" style="color: white;">❂ Government</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Website_development' %}" style="color: white;">❂ Website development</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Transportation' %}" style="color: white;">❂ Transportation</a></li>
+                                <li><a class="dropdown-item" href="{% url 'developers_and_property_managers' %}" style="color: white;">❂  Developers and Property Managers</a></li>
+                                <li><a class="dropdown-item" href="{% url 'engineering_design_and_consulting' %}" style="color: white;">❂ Engineering, Design, and Consulting</a></li>
+                                <li><a class="dropdown-item" href="{% url 'general_contractors_program_and_construction_managers' %}" style="color: white;">❂ General Contractors,Program and Construction Managers</a></li>
+                                <!-- Add more services as needed -->
+                            </ul>
+                        </li>
+                        <style>
+                            .table td, .table th {
+                                padding: 0.75rem;
+                                vertical-align: top;
+                                border-top: 1px solid #ffffff00;
+                        </style>
+                        <li class="nav-item dropdown pc-version">
+                            <a class="nav-link dropdown-toggle" style="font-weight: 550!important;" href="#" data-toggle="dropdown">Industry</a>
+                            <div class="dropdown-menu dropdown-menu-container pc">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a class="dropdown-item" href="#">❂ Education</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'hospitality_industry' %}">❂ Hospitality</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'government' %}">❂ Government</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'engineering_design_and_consulting' %}">❂ Engineering, Design, and Consulting</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'Healthcare' %}">❂ Healthcare</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'manufacturing_and_technology_industry' %}">❂ Manufacturing and<br> Technology</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'Transportation' %}">❂ Transportation</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'general_contractors_program_and_construction_managers' %}">❂ General Contractors,<br>Program and Construction Managers</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'retail_and_banking' %}">❂ Retail and Banking</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'energy_and_resources_industry' %}">❂ Energy and Resources</a>
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'Website_development' %}">❂ Website development
+                                        </td>
+                                        <td>
+                                            <a class="dropdown-item" href="{% url 'developers_and_property_managers' %}">❂ Developers and Property Managers</a>
+                                        </td>
+                                        <!-- Add an empty cell for the last row since it has fewer columns -->
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact-us' %}" style="font-weight: 550!important;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+                <div style="margin-left: 13%;">
+                    <a href="{% url 'request_demo' %}" class="jj" style="margin-left: -17px;">Request Demo</a>
+                </div>
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <!-- <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search nav-link"></i></a></li>
+                    </ul> -->
+                </div>
+                <!-- End Atribute Navigation -->
+            </div>
+            <!-- Start Side Menu -->
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+
+    {% block content %}
+    {% endblock content %}
+
+     <!-- Start Footer  -->
+    <footer>
+        <div class="footer-main" style="background-color: #05122b!important;">
+            <div class="container">
+                <div class="row">
+                    <!-- div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Business Time</h3>
+                            <ul class="list-time">
+                                <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Newsletter</h3>
+                            <p>It is not Working. Stop Trying!!</p>
+                            <form class="newsletter-box">
+                                <div class="form-group">
+                                    <input class="" type="email" name="Email" placeholder="Email Address*" />
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <button class="btn hvr-hover" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Social Media</h3>
+                            <p>Please Avoid contacting me on social medias. I am quite inactive except for Github.</p>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-kaggle" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link-contact">
+                            <h4>OFFICE</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>.<br>Location,<br>Nigeria</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-6397972713">+ 234 000 000 </a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <div class="footer-widget">
+                            <h4>About Developer</h4>
+                            <p><b>Name: - Ritvik Dayal</b><br><i>Web Development | Data Science | Information Security<br>Winner @ Smart India Hackathon-2020</i>
+                            <br>An engineer who likes to learn by accepting challenges. Quick learner and innovative thinker currently traveling on a path to expertise Web Development & Data Analytics , look forward to a career in Information Security and Data Science. I am quite an optimistic thinker and believe in working together and growing better</p>                             
+                        </div> -->
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="#">Company Blog</a></li>
+                                <li><a href="#">Our Solutions</a></li>
+                                <li><a href="#">Feedback</a></li>
+                                <li><a href="{% url 'contact-us' %}">Contact Us</a></li>
+                               <!--  <li><a href="#">HTML, CSS, JS</a></li>
+                                <li><a href="#">Tkinter</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <!-- <div class="footer-link-contact">
+                            <h4>Operations Office</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: headquartered in Nigeria <br>Location,<br> Nigeria</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-6397972713">+ 234 000 000 </a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">Princehot@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div> -->
+                        <div class="footer-link">
+                            <h4>Info</h4>
+                            <ul>
+                                <li><a href="#">Clients</a></li>
+                                <li><a href="#">Press Release</a></li>
+                                <li><a href="{% url 'faqs' %}">FAQs</a></li>
+                                <li><a href="#">Testimonials</a></li>
+                                <li><a href="#">Request a Demo</a></li>
+                               <!--  <li><a href="#">HTML, CSS, JS</a></li>
+                                <li><a href="#">Tkinter</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company" style="display: flex; justify-content: start; align-items: start; margin-left: 5%;">
+        ©2024. Adroit Solutions Ltd. All rights reserved.<br>
+        
+        </p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    
+    <!-- ALL JS FILES -->
+    <script src="{% static 'shop/js/cart.js' %}"></script>
+    <script src="{% static 'shop/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'shop/js/popper.min.js' %}"></script>
+    <script src="{% static 'shop/js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'shop/js/jquery.superslides.min.js' %}"></script>
+    <script src="{% static 'shop/js/bootstrap-select.js' %}"></script>
+    <script src="{% static 'shop/js/inewsticker.js' %}"></script>
+    <script src="{% static 'shop/js/bootsnav.js' %}"></script>
+    <script src="{% static 'shop/js/images-loded.min.js' %}"></script>
+    <script src="{% static 'shop/js/isotope.min.js' %}"></script>
+    <script src="{% static 'shop/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'shop/js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'shop/js/form-validator.min.js' %}"></script>
+    <script src="{% static 'shop/js/contact-form-script.js' %}"></script>
+    <script src="{% static 'shop/js/custom.js' %}"></script>
+    <script src="{% static 'js/loading_animation.js' %}"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    // loading_animation.js
+window.addEventListener("load", function () {
+    // Show the loading overlay
+    const loadingOverlay = document.getElementById("loading-overlay");
+    loadingOverlay.classList.add("active");
+
+    // Blank the page while loading
+    const blankOverlay = document.getElementById("blank-overlay");
+    blankOverlay.style.display = "block";
+
+    // Hide the loading overlay and show the page content after 2.5 seconds (you can adjust this value as needed)
+    setTimeout(function () {
+        loadingOverlay.classList.remove("active");
+        blankOverlay.style.display = "none";
+
+        // Show the page content after hiding the loading animation
+        const pageContent = document.getElementById("page-content");
+        pageContent.classList.add("active");
+    }, 2500); // 2500 milliseconds = 2.5 seconds (adjust this value as needed)
+});
+
+</script>
+
+<script>
+    // JavaScript code for scaling and centering
+    (function() {
+        const targetWidth = 1366;
+        const targetHeight = 768;
+        const phoneWidthThreshold = 768; // Adjust as needed for phone detection
+
+        function isPhone() {
+            return window.innerWidth <= phoneWidthThreshold;
+        }
+
+        function resizeWindow() {
+            if (!isPhone()) {
+                const scaleX = window.innerWidth / targetWidth;
+                const scaleY = window.innerHeight / targetHeight;
+                const scale = Math.max(scaleX, scaleY);
+
+                const scaledWidth = Math.ceil(targetWidth * scale);
+                const scaledHeight = Math.ceil(targetHeight * scale);
+
+                const translateX = (window.innerWidth - scaledWidth) / 2;
+                const translateY = (window.innerHeight - scaledHeight) / 2;
+
+                document.body.style.transform = `scale(${scale})`;
+                document.body.style.transformOrigin = 'top left';
+                document.body.style.width = `${targetWidth}px`;
+                // document.body.style.height = `${targetHeight}px`;
+                document.style.position = 'absolute';
+                document.style.left = `${translateX}px`;
+                document.style.top = `${translateY}px`;
+            } else {
+                resetScaling();
+            }
+        }
+
+        function resetScaling() {
+            document.body.style.transform = '';
+            document.body.style.transformOrigin = '';
+            document.body.style.width = '';
+            document.body.style.height = '';
+            document.style.position = '';
+            document.body.style.left = '';
+            document.body.style.top = '';
+        }
+
+        window.addEventListener('resize', resizeWindow);
+        window.addEventListener('load', resizeWindow);
+
+        // Initial call to resizeWindow function
+        resizeWindow();
+    })();
+</script>

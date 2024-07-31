@@ -1,0 +1,824 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+<!-- example_template.html -->
+
+<style>
+.explore-link {
+  background-color: #083590; /* Background color (you can change this to your desi#083590 color) */
+  padding: 10px 20px; /* Add padding to the link */
+  border-radius: 20px; /* Add border radius to give rounded corners */
+  color: #ffffff; /* Text color */
+  font-size: 15px!important;
+  text-align: center;
+  display: inline-block; /* Make the link inline block to adjust width */
+  width: 250px; /* Set a specific width for the link (you can change this to your desi#083590 width) */
+}
+
+.explore-link:hover {
+  background-color: transparent; /* Make the background transparent on hover */
+  border: 2px solid #ffffff; /* Add a white border on hover */
+}
+
+</style>
+
+    <!-- Start Slider -->
+     <!-- end Categories  -->
+    <style>
+        .banner-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 5%;
+    align-items: start;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('{% static 'shop/images/Banners/low-angle-view-skyscrapers.jpg' %}');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Adjust the color and opacity here */
+    opacity: 0.7; /* Adjust the opacity value (0 to 1) */
+    z-index: 0;
+}
+
+.cente#083590-text {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    /*  background-color: rgba(0, 0, 0, 0.7);*/
+    border-radius: 10px;
+}
+    </style>
+<div class="banner-container">
+    <span class="banner-content">
+        <div style="">  
+            <div class="cente#083590-text bay1">
+                <div class="col-md-12" style="margin-top: 5%; margin-bottom: 10px;">
+                    <h1  style="font-size: 40px; color: white; font-family: 'Poppins', sans-serif;;" class="m-b-20"><strong>iConcept4 Pro</strong>
+                    <br>
+                     Internal control software</h1>
+                    <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">__</div>
+                    </div>
+                    <p class="m-b-40" style="font-family: 'Poppins', sans-serif;; font-size: 15px;">
+                     As a company, we work hard to improve our offerings from time to time to<br> 
+                     give our clients the best experience.</p>
+                    <p><a href="#" class="explore-link" >Get In Touch</a></p>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+<div class="circle-animation"></div>
+   <!-- End container 1 -->  
+
+   <!-- start container 1 -->
+
+    <!-- Start Categories  -->
+ <!-- Advanced Tech Container</title> -->
+
+<style>
+    section {
+        font-family: Arial, sans-serif;
+        background-color: rgb(255, 255, 255);
+        padding: 50px;
+    }
+
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        flex: 1;
+        padding-right: 50px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .image1 {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .animationImage {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: -40%;
+        border-radius: 100px;
+        transform: translate(-50%, -100%);
+        animation: moveUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .big-number {
+        font-size: 80px; /* You can adjust the font size as needed */
+        font-weight: bold; /* You can adjust the font weight as needed */
+        color: #083590;
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px; /* Adjust the spacing between the number and the paragraphs */
+    }
+
+    .text-content p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+
+    /* Media query for phone versions */
+    @media screen and (max-width: 767px) {
+        .container2 {
+            flex-direction: column;
+        }
+
+        .content {
+            padding-right: 0;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .animationImage {
+            position: static;
+            transform: none;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .big-number {
+            font-size: 60px;
+        }
+    }
+</style>
+
+
+
+
+    <!-- Start Categories  -->
+
+  <style>
+    .container4 {
+        display: flex;
+    }
+
+    .text7 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+        }
+        .text7 {
+            padding: 20px;
+        }
+    }
+</style>
+
+<section1>
+    <div class="container4" style="margin-top: -5%;">
+        <div style="flex: 1;">
+            <video class="img-fluid" style="border-radius: 30px;" autoplay loop muted>
+        <source src="{% static 'shop/images/Banners/todayic.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+        </div>
+        <div class="text7">
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 30px;" >
+                iConcept4 Pro
+            </p>
+            <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">_</div>
+                    </div>
+
+            <p style="color: black; font-family: sans-serif; font-size: 80%;" >
+               iConcept4Pro is an internal control software developed by Adroit Consulting Limited Nigeria. The software provides a powerful tool extremely useful in fighting against fraud and in effectively supporting the pivotal roles of Internal Control officers as well as Internal Auditors in today’s ever challenging financial business environment. It has therefore become critical for organizations to implement real-time continuous transaction monitoring and exception management technology that delivers accurate alerts for an effective financial crime management, supports higher standards of corporate governance, reports potential fraudulent activities that may involve staff and customers and above all, maintains reliable financial and operational information.
+            </p>
+           <!--  <p style="margin-top: 10px; color: black; font-family: Helvetica; " >
+               Adroit develops custom software solutions based on a range of platforms and technologies, including Windows, Unix, Oracle, JAVA, BIRT, Linux, .Net, J2EE, J2SE, DROOLS and other ETL Tools. Our enviable reputation and success in providing pragmatic quality solutions for complex IT projects has resulted in high volume of business.
+            </p> -->
+        </div>
+    </div>
+</section1>
+
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+  <div class="row" style="margin-top: -5%!important; margin-left: 5px; display: flex; justify-content: center; align-items: center;">
+                        <div class="big-number">_______________</div>
+                    </div>
+
+
+<style>
+    .container4 {
+        display: flex;
+    }
+
+    .text5 {
+        flex: 1;
+        padding: 40px;
+    }
+
+    /* Optional: To limit the image size, you can add a max-width */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Media query for phone version */
+    @media screen and (max-width: 767px) {
+        .container4 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text5 {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+</style>
+
+<section1 >
+    <div class="container4" style= "margin-top:-70px; padding: 10%;">
+        <div style="flex: 1;">
+            <div class="container20" style="margin-top: 2%; margin-bottom: 2%;">
+  <h2 style="font-weight: bold; color: #083590;">iConcept4 Pro</h2>
+
+  <button class="accordion" style=" background-color: #083590; color: white; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>
+        <ul style="margin-top: 1%;">
+            <li>♦ Audit Library for Continuity</li>
+            <li>♦ Email Messaging and Escalation</li>
+            <li>♦ Customizable Parameterization</li>
+            <li>♦ Secure Authentication and Automatic Call Over</li>
+            <li>♦ Independent IT Audit Access</li>
+            <li>♦ ERM Solution with CCM and CAM</li>
+            <li>♦ Real-time Continuous Transaction Monitoring</li>
+            <li>♦ Exception Management and Accurate Alerts</li>
+            <li>♦ Corporate Governance and Fraud Reporting</li>
+            <li>♦ Flexibility for Various Audit Functions</li>
+            <li><button onclick="openModal()" style="border-radius: 10px; background-color: #083590; color: white;">READ MORE</button></li>
+        </ul>
+
+        <!-- Popup Modal Container -->
+        <div id="myModal" class="modal" style="z-index: 100px;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Additional Information</h2>
+                <p>Here features of iConcept4Pro, the internal control software developed by Adroit Consulting Limited Nigeria:</p>
+                <ol>
+                    <li><span style="font-weight: bold; color: #083590;">Audit Library for Continuity:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ Concept4TM provides an Audit Library where all audit findings, records, reports, and key actions are sto#083590. This ensures continuity even in cases of staff changes within the audit unit. The historical data remains accessible for reference and analysis.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Email Messaging and Escalation:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ The software offers an email messaging and escalation feature for prompt actions. Automated email notifications are sent for actions and responses, and escalation is possible based on compatibility maturity model rules and severity levels. This aids in timely corrective and preventive actions.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Customizable Parameterization:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ iConcept4Pro allows auditors to specify how the system tracks control anomalies. The software is highly flexible and responsive, with built-in functionality for easy customization to meet a variety of audit and internal control requirements.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Secure Authentication and Automatic Call Over:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ The software includes a mechanism for secure online authentication. Suspicious and unauthorized transactions are tracked effectively. Additionally, both single and multiple transactions can be subjected to an automatic call over process to ensure their legitimacy.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">ERM Solution with CCM and CAM:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ iConcept4Pro serves as an Enterprise Risk Management (ERM) solution. It comes bundled with a comprehensive Continuous Control Monitoring (CCM) and Continuous Auditing Monitoring (CAM) tool. This tool employs a robust detection mechanism focused on early fraud detection, contributing to cost-effective risk management.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Independent IT Audit Access:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ iConcept4Pro ensures the independence of IT Audit from the core IT department of the organization. This is achieved through direct access to critical audit reports, enabling a transparent and impartial assessment of IT-related controls.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Real-time Continuous Transaction Monitoring:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ The software enables real-time continuous monitoring of transactions. This ensures that any anomalies or unusual activities are detected promptly, supporting effective fraud prevention and financial crime management.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Corporate Governance and Fraud Reporting:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ iConcept4Pro provides accurate alerts for potential issues or anomalies in transactions. Exception management capabilities help internal control officers and auditors to focus their attention on cases that require investigation, improving overall efficiency.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Flexibility for Various Audit Functions:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ The software supports higher standards of corporate governance by identifying and reporting potential fraudulent activities that involve both staff and customers. This contributes to maintaining integrity in financial and operational information.</li>
+                        </ul>
+                    </li>
+                    <li><span style="font-weight: bold; color: #083590;">Cross-Channel Fraud Prevention:</span>
+                        <ul style="margin-left: 10px;">
+                            <li>♢ The software's flexibility and responsiveness make it adaptable to various audit and internal control functions. This adaptability allows organizations to tailor the software to their specific requirements and processes.</li>
+                        </ul>
+                    </li>
+                    <!-- Repeat the above structure for each feature -->
+                </ol>
+                <p style="margin-top: 10px; color: black;">In summary, iConcept4Pro offers a range of features designed to enhance internal control, streamline audit processes, and improve fraud detection in today's challenging financial business environment.</p>
+            </div>
+        </div>
+
+
+        <!-- Add CSS styling for the modal -->
+        <style>
+            /* Modal Styling */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <!-- JavaScript functions for opening and closing the modal -->
+        <script>
+            var modal = document.getElementById("myModal");
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+
+            function openModal() {
+                modal.style.display = "block";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+        </script>
+            </p>
+          </div>
+        </div>
+
+        </div>
+        <div class="text5">
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 20px;" >
+              QUALITY ASSURANCE AND AUDIT PROVIDED BY
+            </p>
+            <p style="font-weight: bold; color: black; font-family: Times New Roman; font-size: 20px;" >
+            ⭐⭐⭐⭐⭐
+            </p>
+
+            <div class="row" style="margin-top: -80px!important; margin-left: 5px;">
+                        <div class="big-number">__</div>
+                    </div>
+
+            <p style="color: black; font-family: Times New Roman; font-size: 26px;" >
+               “Adroit Solutions Limited was worth a fortune to my Startup. Keep up the excellent work.!”
+            </p>
+        </div>
+    </div>
+</section1>
+
+    <!-- end Categories  -->
+    <h2 style="font-weight: bold; color: #083590; display: flex; justify-content: center; align-items: center; margin-top: -7%;">What Our users have to say</h2>
+     <div class="row" style="margin-top: -5%!important; margin-left: 5px; display: flex; justify-content: center; align-items: center;">
+                        <div class="big-number">_____</div>
+                    </div>
+<section style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; margin-top: -3%;">
+  <div class="container7">
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/28474384.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold; color: #083590; font-family: Times New Roman;">Business Consulting</h2>
+        <p style="font-family: sans-serif; font-size: 80%;">We help businesses grow, help in consultation give you ideas on softwares that would automate your processes and aid faster and accurate decision making.</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/30437459.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px;  font-weight: bold;  color: #083590;font-family: Times New Roman;">Software/Web Development</h2>
+        <p style="font-family: sans-serif; font-size: 80%;">Our consultants have delive#083590 several projects for customers throughout the world and have the breadth and depth of technical expertise and experience to deliver high quality at reasonable cost while minimizing risk. We can help you achieve your time to market requirements while addressing any skills shortages</p>
+      </div>
+    </div>
+    <div class="box" style="width: 30%;">
+      <div class="text">
+        <div class="icon-container">
+            <img src="{% static 'shop/images/Banners/295917.jpg' %}" alt="Icon" class="icon">
+        </div>
+        <h2 style="margin-top: 10px; font-weight: bold;  color: #083590;font-family: Times New Roman;">Training Audit</h2>
+        <p style="font-family: sans-serif; font-size: 80%;">Provide assurance that a management framework is in place for training activities and that it is implemented and monito#083590.</p>
+      </div>
+    </div>
+    <!-- The fourth box will wrap to the next row automatically -->
+  </div>
+</section>
+
+<style type="text/css">
+.container7 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 50px auto;
+  background-color: white;
+  flex-wrap: wrap; /* Add flex-wrap property to wrap boxes to the next row */
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.box {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 8px 20px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Added transition for smooth animation */
+  min-width: 280px; /* Add a minimum width to avoid squeezing on smaller screens */
+}
+
+.text {
+  text-align: center;
+  font-family: Helvetica;
+  color: black;
+}
+
+.icon-container {
+  display: inline-block;
+}
+
+.icon {
+  width: 50px; /* Adjust the size of the icon as needed */
+  height: 50px;
+}
+
+/* Add hover effect for the boxes */
+.box:hover {
+  transform: translateY(-5px) scale(1.05); /* Scale up and move up on hover */
+}
+
+/* Add media query for phone version */
+@media screen and (max-width: 767px) {
+  .box {
+    width: 100%; /* Change width to 100% for single column layout */
+  }
+}
+</style>
+
+    <!-- start Categories  -->
+
+
+    <!-- end Categories  -->
+<!-- start Categories  -->
+
+    <div class="contact-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="contact-form-right">
+                        <h2 style="font-family: Times New Roman;">Book a Demo</h2>
+                        <p>Demo link will be sent to your email address, ensure you input the correct email.</p>
+                        <form id="contactForm" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required data-error="Please enter your Subject">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message" rows="4" data-error="Write your message" required>REQUEST ICONCEPT4PRO DEMO : </textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="submit-button text-center">
+                                        <button class="btn hvr-hover" id="submit" type="submit" style="border-radius: 10px; background: #083590!important;">Send Message</button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <script>
+                            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                event.preventDefault();
+
+                                let formData = new FormData(this);
+
+                                fetch("{% url 'contact-us' %}", {
+                                    method: 'POST',
+                                    headers: {
+                                        'X-CSRFToken': '{{ csrf_token }}'
+                                    },
+                                    body: formData
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        alert('Message sent successfully!');
+                                        location.reload();  // Refresh the page
+                                    } else {
+                                        alert('There was an error sending your message. Please try again.');
+                                    }
+                                })
+                                .catch(error => console.error('Error:', error));
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="contact-info-left">
+                        <h2 style="font-family: Times New Roman;">CONTACT INFO</h2>
+                        <p style="font-family: sans-serif; font-size: 80%; font-weight: bold;">If you have any questions or need further assistance, please feel free to reach out to us:</p>
+                        <ul>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-map-marker-alt"></i>Address: <br>Location,<br>Nigeria</p>
+                            </li>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-phone-square"></i>Phone: <a href="tel:+91-6397972713">+234-0000 000 00</a></p>
+                            </li>
+                            <li>
+                                <p style="font-weight: bold; font-family: Time New Roman; font-size: 80%;"><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">@gmail.com</a></p>
+                            </li>
+                        </ul>
+                        <p style="font-family: sans-serif; font-size: 80%; font-weight: bold;">Our team is available Monday through Friday from 8:00 AM to 5:00 PM. We look forward to hearing from you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end Categories  -->
+
+
+    <!-- start Categories  -->
+<style>
+.container20 {
+        max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 29%);
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .plus-minus {
+    margin-left: 0%!important;
+  }
+}
+</style>
+</head>
+<body>
+<h2 style="font-weight: bold; color: #083590; display: flex; justify-content: center; align-items: center;">FAQs</h2>
+<!-- <div class="container20" style="margin-top: 2%; margin-bottom: 2%;">
+  <h2 style="font-weight: bold; color: #083590;">iConcept4 Pro</h2>
+
+  <button class="accordion" style="color: #083590; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <button class="accordion" style=" color: #083590; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <button class="accordion" style="  color: #083590; font-weight: bold;">Features <span class="plus-minus" style="margin-left: 80%;">+</span></button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div> -->
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+      this.querySelector('.plus-minus').textContent = '+';
+    } else {
+      panel.style.display = "block";
+      this.querySelector('.plus-minus').textContent = '-';
+    }
+  });
+}
+</script>
+
+    <!-- end Categories  -->
+
+    <!-- end Categories  -->
+  <style>
+    /* Styling for the container and logo images */
+    .container1 {
+      display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        box-shadow: inset 1px -1px 14px 3px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Ensure logos outside the container are hidden */
+    }
+
+    .logoContainer {
+      display: flex;
+      overflow: hidden; /* Hide overflowing logos */
+    }
+
+    .logo {
+      width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;
+      margin: 0 10px; /* Adjust the margin between logos as needed */
+      opacity: 0.7; /* Adjust the initial opacity of the logos */
+      transition: opacity 0.3s ease; /* Add a smooth transition effect for opacity changes */
+      animation: slideAnimation 19s linear infinite; /* Adjust the time (in seconds) to change logos */
+    }
+
+    @keyframes slideAnimation {
+      0% {
+        transform: translateX(100%);
+        opacity: 0.7;
+      }
+      10%, 90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0.7;
+      }
+    }
+  </style>
+
+  <div class="container1">
+    <!-- <img style="width: 100px; /* Adjust the width and height of the logos as needed */
+      height: 80px;" src="{% static 'shop/images/Trusted/flot.png' %}" alt="Logo 1"> -->
+    <p style="font-weight: bold; margin-right:20px; color: black; font-weight: bold; font-size: 17px; color: black;  font-family: Helvetica;">#Trusted_by:</p>
+    <div class="logoContainer">
+      <!-- Add your logo images here -->
+      <img class="logo" src="{% static 'shop/images/Trusted/Wema-Bank.jpg' %}" alt="Logo 1">
+      <img class="logo" src="{% static 'shop/images/Trusted/sterlink.jfif' %}" alt="Logo 2">
+      <img class="logo" src="{% static 'shop/images/Trusted/sky_bank.jfif' %}" alt="Logo 3">
+      <img class="logo" src="{% static 'shop/images/Trusted/Piggy vext.jpg' %}" alt="Logo 4">
+      <!-- <img class="logo" src="{% static 'shop/images/Trusted/mainstreem.jfif' %}" alt="Logo 5"> -->
+      <img class="logo" src="{% static 'shop/images/Trusted/Keystone-Bank.jpg' %}" alt="Logo 6">
+      <img class="logo" src="{% static 'shop/images/Trusted/itmb-logo.jpg' %}" alt="Logo 7">
+      <img class="logo" src="{% static 'shop/images/Trusted/fsdh.jfif' %}" alt="Logo 8">
+      <img class="logo" src="{% static 'shop/images/Trusted/Union-Bank.jpeg' %}" alt="Logo 9">
+      <img class="logo" src="{% static 'shop/images/Trusted/Fidelity.png' %}" alt="Logo 10">
+      <img class="logo" src="{% static 'shop/images/Trusted/Coronation-Merchant-Bank.jpg' %}" alt="Logo 11">
+      <img class="logo" src="{% static 'shop/images/Trusted/ASO-removebg-preview.png' %}" alt="Logo 12">
+      <!-- Add more logo images as needed -->
+      <!-- Add a total of 20 small logo images -->
+    </div>
+  </div>
+
+<!-- End container 1 -->
+
+
+    <!-- end Categories  -->
+
+    <!-- Start Categories  -->
+    <!-- End Categories -->
+
+    <!-- Start Products  -->
+    <!-- End Products  -->
+
+    <!-- Start Blog  -->
+    <!-- End Blog  -->
+
+    {% endblock content %}

@@ -1,0 +1,298 @@
+{% extends 'shop/layout.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box" style="height: 300px; background-image: url('{% static 'shop/images/Banners/light-trails-buildings.jpg' %}');">
+        
+        <div class="container">
+            <div class="row bay1">
+                <div class="col-lg-12" style="margin-top: 4%;">
+                    <h2>ABOUT US Experts in business solutions </h2>
+                </div>
+                <h3  style="color: white; margin-left: 1.2%; font-size: 25px!important;">A customer-focused <span style="color:red;"> digital solutions</span> and <span style="color: red;">services</span> company.</h3>
+            </div>
+            <div class="circle-animation"></div>
+            <div class="circle-animation1"></div>
+        </div>
+    </div>
+    
+
+    <!-- End All Title Box -->
+
+    <!-- Start About Page  -->
+    <div class="about-box-main">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-6">
+                    <!-- <div class="banner-frame"> <img class="img-fluid" src="{% static 'shop/images/Banners/save3.png' %}" alt="company"  style="
+    border-radius: 30px;">
+                    </div> -->
+                   <div class="banner-frame">
+    <video class="img-fluid" style="border-radius: 30px;" autoplay loop muted>
+        <source src="{% static 'shop/images/Banners/save3.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="noo-sh-title-top" style="font-family: Times New Roman;">Welcome to Adroit Solutions Limited</h2>
+                    <p style="font-family: sans-serif; font-size: 70%;">Adroit is a software development company headquartered in Nigeria, with office in Nigeria- Adroit Solutions Ltd. It has been successfully operating for almost 10 years and currently employs more than 50 qualified software engineers and managers.</p>
+                    <p style="font-family: sans-serif; font-size: 70%; font-weight: 700;">Adroit develops custom software solutions based on a range of platforms and technologies, including Windows, Unix, Oracle, JAVA, BIRT, Linux, .Net, J2EE, J2SE, DROOLS and other ETL Tools. Our enviable reputation and success in providing pragmatic quality solutions for complex IT projects has resulted in high volume of business.</p>
+					<a class="btn hvr-hover" href="#" style="border-radius: 10px; background: #083590!important;">Read More</a>
+                    <div class="circle-animation1"></div>
+                </div>
+
+            </div>
+<!-- <style>
+    .service-block-inner {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .service-block-inner:hover {
+        transform: translateY(-10px);
+    }
+
+    .service-block-inner h3 {
+        color: #007bff;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .service-block-inner p {
+        color: #6c757d;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+</style>
+
+<div class="container">
+    <div class="row my-5" style="margin-top: 10%!important;">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="service-block-inner text-center">
+                <h3>Our Vision</h3>
+                <p>To become Africa’s reliable payment service provider, while creating wealth for stakeholders.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="service-block-inner text-center">
+                <h3>Our Mission</h3>
+                <p>Using customer-focused digital solutions to improve the quality of life for Africans through efficient service delivery.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="service-block-inner text-center">
+                <h3>We are Experts</h3>
+                <p>Our team is dedicated to providing top-notch services, ensuring the best outcomes for our clients and stakeholders.</p>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+    <style>
+        .mission-section {
+            background-color: #020c24;
+            color: white;
+            padding: 50px 20px;
+            border-radius: 10px;
+            position: relative;
+            margin-top: 20px;
+            text-align: left!important;
+        }
+        .mission-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .mission-section p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            font-family: sans-serif;
+        }
+        .mission-section .our-links {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #80cbc4;
+            text-decoration: none;
+            border-bottom: 2px solid #80cbc4;
+            padding-bottom: 3px;
+            margin-top: 30px;
+        }
+        .mission-section .our-links:hover {
+            color: #004d40;
+            background-color: #80cbc4;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .mission-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 77, 64, 0.9);
+            z-index: -1;
+            border-radius: 10px;
+        }
+    </style>
+<div class="container">
+    <div class="mission-section text-center">
+        <div class="overlay"></div>
+        <p style="margin-bottom: -2%;">Adroit Solutions LTD</p>
+        <h2 style="color: white;">Our Mission</h2>
+        <p>At Adroit Solutions Ltd, our mission is to deliver exceptional, bespoke software solutions that enhance operational efficiency, drive innovation, and facilitate success for our diverse clientele. With nearly a decade of industry expertise and a robust team of over 50 highly qualified engineers and managers, we are dedicated to providing pragmatic, high-quality solutions tailored to meet the unique needs of each client. Our extensive proficiency spans a wide range of technologies, including Windows, Unix, Oracle, JAVA, BIRT, Linux, .Net, J2EE, J2SE, DROOLS, and various ETL tools.</p>
+        <p>Endorsed by prestigious accounting bodies such as The Institute of Chartered Accountants in Africa & Wales and The Association of Chartered Certified Accountants, we are committed to supporting our clients in achieving comprehensive Governance, Risk, Compliance (GRC), and Audit integration. Our modern, market-leading software solutions are designed to offer an unbeatable low cost of ownership while ensuring robust data protection and compliance. At Adroit Solutions Ltd, we prioritize client satisfaction, aiming to build long-term partnerships through unparalleled service, innovation, and technical excellence.</p>
+        <a href="#" class="our-links">Our Links →</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="mission-section text-center">
+        <div class="overlay"></div>
+        <p style="margin-bottom: -2%;">Adroit Solutions LTD</p>
+        <h2 style="color: white;">Vision</h2>
+        <p>Our vision at Adroit Solutions Ltd is to be globally recognized as the premier provider of cutting-edge software solutions, renowned for our unwavering commitment to quality, customer service, and technological innovation. We aspire to lead the industry by continuously expanding our capabilities, leveraging emerging technologies, and setting new standards for agile and flexible software platforms.</p>
+        <p>We envision a future where organizations across various sectors rely on our expertise to seamlessly integrate Governance, Risk, Compliance (GRC), and Audit processes into their operations, fostering a culture of efficiency and excellence. By maintaining our dedication to delivering superior, cost-effective solutions, we aim to empower our clients to achieve their strategic objectives, ensuring their sustained growth and success. Adroit Solutions Ltd is committed to being a catalyst for positive change, driving progress and excellence in the global software industry.</p>
+        <a href="#" class="our-links">Our Links →</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="mission-section text-center">
+        <div class="overlay"></div>
+        <p style="margin-bottom: -2%;">Adroit Solutions LTD</p>
+        <h2 style="color: white;">BUSINESS PRINCIPLES</h2>
+        <p>We constantly strive to anticipate the rapidly changing needs of our clients and to develop new services to meet those needs.</p>
+        <p>To satisfy the customer through early and continuous delivery of valuable software We take great pride in the professional quality of our service delivery To share Knowledge with People</p>
+        <h2 style="color: white;">Our Expert Team</h2>
+        <p>Ultimately, leadership is not about glorious crowning acts. It's about keeping your team focused on a goal and motivated to do their best to achieve it, especially when the stakes are high and the consequences really matter. It is about laying the groundwork for others' success, and then standing back and letting them shine.</p>
+        <a href="#" class="our-links">Our Links →</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+            <div class="row my-4">
+                <div class="col-12">
+                    <h2 class="noo-sh-title">Meet Our Team</h2>
+                    <h2 class="noo-sh-title" style="color: #083590;">Adroit Solutions Management Team</h2>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="hover-team">
+                        <div class="our-team"> <img src="{% static 'shop/images/img.jpg' %}" alt="" />
+                            <div class="team-content">
+                                <h3 class="post" style="font-weight: bold;">MD/CEO</h3> <span class="post" style="color: #083590;">Web Developer</span> </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="#" class="fab fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-google-plus"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-youtube"></a>
+                                </li>
+                            </ul>
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
+                        </div>
+                        <hr class="my-0"> </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="hover-team">
+                        <div class="our-team"> <img src="{% static 'shop/images/img.jpg' %}" alt="" />
+                            <div class="team-content">
+                                <h3 class="post" style="font-weight: bold;">MD/CEO</h3> <span class="post" style="color: #083590;">Web Developer</span> </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="#" class="fab fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-google-plus"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-youtube"></a>
+                                </li>
+                            </ul>
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
+                        </div>
+                        <hr class="my-0"> </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="hover-team">
+                        <div class="our-team"> <img src="{% static 'shop/images/img.jpg' %}" alt="" />
+                            <div class="team-content">
+                                <h3 class="post" style="font-weight: bold;">MD/CEO</h3> <span class="post" style="color: #083590;">Web Developer</span> </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="#" class="fab fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-google-plus"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-youtube"></a>
+                                </li>
+                            </ul>
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
+                        </div>
+                        <hr class="my-0"> </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="hover-team">
+                        <div class="our-team"> <img src="{% static 'shop/images/img.jpg' %}" alt="" />
+                            <div class="team-content">
+                                <h3 class="post" style="font-weight: bold;">MD/CEO</h3> <span class="post" style="color: #083590;">Web Developer</span> </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="#" class="fab fa-facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-google-plus"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fab fa-youtube"></a>
+                                </li>
+                            </ul>
+                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                        </div>
+                        <div class="team-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
+                        </div>
+                        <hr class="my-0"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About Page -->
+{% endblock content %}
